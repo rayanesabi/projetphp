@@ -1,6 +1,27 @@
-*{ /*style de la page entière*/
+body{ /*style de la page entière*/
     background-color: #f8f7f6;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:"adobe-caslon-pro";
+}
+
+#banniere{
+    position: relative;
+    text-align: center;
+    margin: 2%;
+}
+
+#banniere img{
+    width: 711px;
+    height: 473px;
+}
+
+.p{
+    font-size: 30px;
+    font-style: italic;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
 }
 
 #Recettes{ /*ensemble des 3 recettes*/
@@ -10,7 +31,7 @@
 
 #Recettes li{ /*recette une par une*/
     display: inline-block;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 310px;
     height: 420px;
     background-color: black;
