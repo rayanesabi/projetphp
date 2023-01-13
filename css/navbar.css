@@ -16,7 +16,7 @@
 
 .navbar li a {
     display: flex;
-    padding: 0vw 3vw;
+    padding: 0vw 2vw;
     text-decoration: none;
     font-weight: 700;
     text-align: center;
@@ -25,7 +25,7 @@
     
 }
 
-.navbar li #accueil:hover, #connex:hover {
+.navbar li #accueil:hover, #connex:hover,  #inscr:hover {
     color: black;
 } 
 

@@ -45,3 +45,19 @@ input[type="email"], input[type="password"], input[type="text"]  {  /*formulaire
 .boutonLog:hover{
     background-color: #dbb79a;
 }
+
+#Onglets{
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+}
+
+#connexion{
+   opacity: 20%;
+   cursor: pointer;
+   margin-right: 20px;
+}
+
+#inscription{
+    border-bottom: 3px solid rgb(85, 44, 44);
+}

@@ -42,8 +42,18 @@ input[type="email"], input[type="password"] {  /*formulaire avec tous les inputs
     background-color: #dbb79a;
 }
 
+#Onglets{
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+}
 
-h3{
-    display: block;
-    justify-content: space-evenly;
+#connexion{
+    border-bottom: 3px solid rgb(85, 44, 44);
+    margin-right: 20px;
+}
+
+#inscription{
+    opacity: 20%;
+    cursor: pointer;
 }
