@@ -57,5 +57,77 @@ h4{
     text-align: center;
 }
 
+.rating a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 3em;
+    transition: color .4s;
+}
 
+.rating a:hover,
+.rating a:focus {
+    fill: orange;
+    cursor: pointer;
+}
+.rating a:hover ~ a,
+.rating a:focus ~ a {
+    color: orange;
+}
+.rating {
+    justify-content: center;
+    flex-direction: row-reverse;
+    margin-left: 35%;
+}
+
+.corps {
+    display: flex;
+    flex-direction: column;
+}
+
+.corps img {
+    width: 30%;
+    height: 30%;
+    align-items: center;
+}
+
+.box_image {
+    text-align: center;    
+}
+
+.cmb_personnes {
+    font-size: 20px;
+    padding-top: 20px;
+    margin-right: 35%;
+}
+
+.avis {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.temps_total_preparation {
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    height: 100px;
+    margin-right: 35%;
+    margin-left: 35%;
+    border: 1px solid black;
+    align-items: center;
+    height: 80%;
+}
+
+.cuisson, .preparation, .repos {
+    font-size: 20px;
+}
+
+.corps_étape {
+    background-color: aqua;
+    display: flex;
+
+
+
+}
 
