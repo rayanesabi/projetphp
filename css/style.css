@@ -1,6 +1,6 @@
 body{ /*style de la page entière*/
-    background-color: #f8f7f6;
-    font-family:"adobe-caslon-pro";
+    background-color: #FDF6F0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #banniere{
@@ -50,7 +50,7 @@ body{ /*style de la page entière*/
     font-size: 16px;
     font-weight: bold;
     margin: 40px;
-    padding: 85px 4px 6px;
+    padding: 85px 4px 8px;
     display: inline-block;
     background-color: white;/*#c85103*/
     color: black;
@@ -65,12 +65,11 @@ body{ /*style de la page entière*/
 }
 
 #categories img{
-    width: 80px;
-    height: 80px;
-    background-color: white;
+    width: 70px;
+    height: 70px;
     position: absolute;
-    top: 10px;
-    left: 20px;
+    top: 15px;
+    left: 25px;
 }
 
 h4{
@@ -78,5 +77,38 @@ h4{
     text-align: center;
 }
 
+#connect{
+    margin: 50px;
+    padding: 0;
+    font-family: sans-serif; 
+    text-align: center;
+}
+
+input[type="email"], input[type="password"] {  /*formulaire avec tous les inputs*/
+    box-sizing: border-box;
+    display: block;
+    position: inherit;
+    margin: 5px auto;
+    font-size: 15px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgb(152, 151, 151); 
+    outline: none;
+    height: 40px;
+    width: 220px;
+}
+
+.boutonLog{ /*bouton se connecter et s'inscrire*/
+    border-radius: 6px;
+    outline: none;
+    background: #a17d60;
+    color: white;
+    font-size: 10px;
+    cursor: pointer;
+    padding: 8px 80px;
+    position: relative;
+    margin: 10px;
+    margin-bottom: 55px;
+}
 
 
