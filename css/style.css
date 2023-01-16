@@ -1,6 +1,9 @@
+@import url("navbar.css");
+
+
 body{ /*style de la page entière*/
-    background-color: #f8f7f6;
-    font-family:"adobe-caslon-pro";
+    background-color: #FDF6F0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #banniere{
@@ -50,7 +53,7 @@ body{ /*style de la page entière*/
     font-size: 16px;
     font-weight: bold;
     margin: 40px;
-    padding: 85px 4px 6px;
+    padding: 85px 4px 8px;
     display: inline-block;
     background-color: white;/*#c85103*/
     color: black;
@@ -65,12 +68,11 @@ body{ /*style de la page entière*/
 }
 
 #categories img{
-    width: 80px;
-    height: 80px;
-    background-color: white;
+    width: 70px;
+    height: 70px;
     position: absolute;
-    top: 10px;
-    left: 20px;
+    top: 15px;
+    left: 25px;
 }
 
 h4{

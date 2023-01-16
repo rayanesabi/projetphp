@@ -4,7 +4,6 @@
     width: 100%;
     margin: 0;
     padding: 0;
-    text-align: center;
     list-style: none;
     position: -webkit-sticky;
     position:sticky;
@@ -12,12 +11,12 @@
 
 .navbar li{
     display:inline-block;
-    text-align: center;
+    color: #a17d60;
 }
 
 .navbar li a {
     display: flex;
-    padding: 0vw 3vw;
+    padding: 0vw 2vw;
     text-decoration: none;
     font-weight: 700;
     text-align: center;
@@ -26,7 +25,7 @@
     
 }
 
-.navbar li a:hover {
+.navbar li #accueil:hover, #connex:hover,  #inscr:hover {
     color: black;
 } 
 
@@ -44,8 +43,8 @@ input[type="search"] {
     
   }
 
-  button[type="submit"] {
-    width: 20%;
+  .go {
+    width: 10%;
     background-color: #a17d60;
     color: white;
     padding: 14px 20px;
