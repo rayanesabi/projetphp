@@ -1,7 +1,9 @@
+
 <?php
 
 final class Vue
 {
+ 
     public static function ouvrirTampon()
     {
         // On démarre le tampon de sortie, on va l'appeler "tampon principal"
@@ -14,6 +16,8 @@ final class Vue
         return ob_get_clean();
     }
 
+    
+    
     public static function montrer ($S_localisation, $A_parametres = array())
     {
         $S_fichier = Constantes::repertoireVues() . $S_localisation . '.php';

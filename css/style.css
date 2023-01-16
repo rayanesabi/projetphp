@@ -78,6 +78,12 @@ h4{
     text-align: center;
 }
 
+.rating {
+    justify-content: center;
+    flex-direction: row-reverse;
+    margin-left: 35%;
+}
+
 .rating a {
     color: #aaa;
     text-decoration: none;
@@ -94,26 +100,27 @@ h4{
 .rating a:focus ~ a {
     color: orange;
 }
-.rating {
-    justify-content: center;
-    flex-direction: row-reverse;
-    margin-left: 35%;
-}
+
 
 .corps {
     display: flex;
     flex-direction: column;
 }
 
+
+/* div qui contient l'image */
+.box_image {
+    text-align: center;    
+}
+
+
+/* image au centre de la recette */
 .corps img {
     width: 30%;
     height: 30%;
     align-items: center;
 }
 
-.box_image {
-    text-align: center;    
-}
 
 .cmb_personnes {
     font-size: 20px;
@@ -138,6 +145,8 @@ h4{
     border: 1px solid black;
     align-items: center;
     height: 80%;
+    background-color: rgb(161, 125, 96);
+    border-radius: 4px;
 }
 
 .cuisson, .preparation, .repos {
@@ -145,10 +154,18 @@ h4{
 }
 
 .corps_étape {
-    background-color: aqua;
+    background-color: brown;
     display: flex;
-
-
-
+    align-items: baseline;
+    flex-direction: column;
+    margin-top: 6px;
+    border-radius: 4px
 }
 
+.p {
+    text-shadow: 2px 1px 2px black;
+}
+
+.texte {
+    font-size: 20px;
+}
