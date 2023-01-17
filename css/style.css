@@ -148,17 +148,24 @@ h4{
 }
 
 .corps_étape {
-    background-color: aqua;
+    background-color: white;
     display: flex;
 }
 
 #Commentaires{
-    display: inline-block;
-    margin-top: 30px;
+    display: flex;
+    align-items: baseline;
+    margin-left: 150px;
+}
+
+#ligneComm{
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
     height: 2px;
     color: black;
     background-color: black;
-    width: 700px;
+    width: 620px;
 }
 
 .container{
@@ -167,4 +174,47 @@ h4{
     border-radius: 30px;
     background-color:white ;
     box-shadow:rgb(0 0 0 / 10%) 0px 0px 10px;
+}
+
+#CommentairesBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#CommentairesBox textarea{
+    border-radius: 4px;
+    font-size: 1vw;
+}
+
+ #submitComment{
+    text-align: center;
+    text-decoration: none;
+    font-size: 1vw;
+    transition-duration: 0.2s;
+    background-color: #c85103;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-left: 1vw;
+    padding: 0.5vw 1vw;
+    cursor: pointer;
+}
+
+
+#commentInput{
+    min-width : 30vw;
+    height: 6vh;
+    resize : none;
+}
+
+#CommentairesBox button:hover{
+    background-color: #cd885b;
+    color: rgb(24, 22, 22);
+}
+
+.profilePicture{
+    width: 60px;
+    height: 60px;
 }

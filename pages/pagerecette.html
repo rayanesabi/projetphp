@@ -13,12 +13,12 @@
 <body>
   <nav class="navbar">
     <ul>
-      <li><a id="logo"><h2>Caramelange</h2><img src="images/logo.png"></a></li>
+      <li><a id="logo"><h2>Caramelange</h2><img src="../images/logo.png"></a></li>
       <li><a><input type="search" placeholder="Rechercher...."><button class="go" type="submit">go</button></a>  </li>
       <li><a id="accueil" href="index.html">ACCUEIL</a></li>
-      <li><a id="connex" href="pages/connexion.html">CONNEXION </a></li>
+      <li><a id="connex" href="../pages/connexion.html">CONNEXION </a></li>
       <li>|</li>
-      <li><a id="inscr" href="pages/inscription.html">INSCRIPTION</a></li> 
+      <li><a id="inscr" href="../pages/inscription.html">INSCRIPTION</a></li> 
     </ul>
   </nav>
  
@@ -51,10 +51,26 @@
   <div class="corps_étape">
     <h1>Liste ingrédients :</h1>
   </div>
- <!---espace commentaire--->
+ <!---divison commentaire--->
   <div id="Commentaires">
     Commentaires (145 avis)
+    <div id="ligneComm">
+    </div>
   </div>
+  <!--espace Commentaires-->
+  <div id="CommentairesBox">
+    <textarea type="textarea" id="commentInput" name="commentField" placeholder="Ajouter un avis..."></textarea>
+    <button id="submitComment">Ajouter</button>
+</div>
+<ul id="comments">
+  <li class='commentArea'>
+    <div class='profile'>
+        <img class='profilePicture' src='../images/avatar.png'>
+        <p class='profileName'>$userPseudo</p>
+    </div>
+    <p class = 'commentsTexts'> $commentText </p>
+</li>
+</ul>
 </div>
 </body>
 
