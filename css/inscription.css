@@ -16,7 +16,7 @@ h3{
     text-align: center;
 }
 
-input[type="email"], input[type="password"], input[type="text"]  {  /*formulaire avec tous les inputs*/
+input[type="email"], input[type="password"], input[type="text"] {  /*formulaire avec tous les inputs*/
     box-sizing: border-box;
     display: block;
     position: inherit;
@@ -26,6 +26,15 @@ input[type="email"], input[type="password"], input[type="text"]  {  /*formulaire
     border: none;
     border-bottom: 2px solid rgb(152, 151, 151); 
     outline: none;
+    height: 40px;
+    width: 220px;
+}
+
+input[type="file"]{
+    display: block;
+    position: inherit;
+    margin: 20px auto;
+    font-size: 13px;
     height: 40px;
     width: 220px;
 }
