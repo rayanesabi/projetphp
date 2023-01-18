@@ -1,0 +1,10 @@
+name: Lint PHP
+on: [push]
+jobs:
+  Lint-php:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: PHP Syntax Checker (Lint)
+        uses: StephaneBour/actions-php-lint@8.1
