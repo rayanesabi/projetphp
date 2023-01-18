@@ -1,32 +1,22 @@
-@import url("navbar.css");
+body{ /*style de la page entière*/
+  background-color: #FDF6F0;
+  color: #212529;
+  text-align: left;
+  margin: 0;  
+  box-sizing: border-box;
+  text-decoration: none;
+}
   
   .card {
       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
       transition: 0.3s;
-      backdrop-filter: blur(10px);
       border:1px solid rgba(255,255,255, 0.18);
-      border-radius: 60px;
+      border-radius: 40px;
       margin: 30px;
+      overflow: hidden;
+      word-wrap: break-word;
     }
   
-  .card3 {
-      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-      transition: 0.3s;
-      backdrop-filter: blur(10px);
-      border:1px solid rgba(255,255,255, 0.18);
-      border-radius: 30px;
-      margin: 100px;
-      width: 1000px;
-    }
-  
-  .card h2
-  {
-   position:absolute;
-   top: -200px;
-   right: 0px;
-   font-size: 2em;
-   color:rgba(255, 255, 255, 0.55);
-  }  
     .card:hover {
       box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     }
@@ -35,6 +25,14 @@
       position: relative;
       text-align: center;
       color: white;
+      width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   
   .card-container {
@@ -47,198 +45,60 @@
       align-content: space-between;
       margin: 10px 211px;
   } 
-  
-  .card-container2 {
-    display: flex;
-    justify-content: center;
-  } 
-  
-  .card-container4 {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    align-content: space-around;
-    margin: 10px 100px;
-  } 
-  
-  .card-container3 {
-    display: flex;
-    justify-content: center;
-    justify-content: space-between;
-    align-items: center;
-  } 
-   
-  
-  .card2 
-  {
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    background-color: rgb(255, 255, 255);
-    flex-direction: column;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transform:translateY(20px);
-    opacity:0;
-    transition: 0.5s;
+
+a {
+  color: black;
+  text-decoration: none;
+} 
+
+
+img {
+  border-start-start-radius: 20px;
+  transition: transform 0.3s, opacity 0.3s;
+  transform: scale(1);
+  object-fit: cover;
+  display: block;
+  text-decoration: none;
+}
+
+img:hover {
+    transform: scale(1.1);
   }
-  .card2:hover{
-    transform:translateY(0px);
-    opacity:1;
-  }
-  
-  h1 {
-    display: flex;
+
+.card-img-top {
+  overflow: hidden;
+  width: 18rem;
+  height: 18rem;
+  box-shadow: 0px 0px 10px #ccc;
+  text-decoration: none;
+}
+
+.card-title {
+  font-family: 'Great Vibes', cursive;
+  color: #ff5733;
+  font-size: 30px;  
+  text-decoration: none;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  margin-top: 0.9rem;
+}
+
+.card-body {
+  overflow: hidden;
+  background-color: white;
+  position: relative;
+  min-height: 1px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  z-index: 1;
-  }
-  
-  
-  h2 {
-  font-size: 20px;
-  font-style: italic;
-  margin-left: 20px;
-  }
-
-  .coteacote {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-  
-  p {
-  font-size: 14px;
-  
-  
-  }
-  
-  .bas {
-  margin-top: 30px;
-  
-  
-  
-  }
-  
-  .bas2 {
-  margin-top: -630px;
-  margin-left: 800px;
-  
-  }
-
-  .image-size {
-    width: 22rem;
-    height: 24rem;
-    border-radius: 30px;
-  }
-
-  .centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .bottom-left {
-    position: absolute;
-    bottom: 8px;
-    left: 16px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: bold;
-    font-size: 23px;
-    color: black;
-  }
-
-  body{ /*style de la page entière*/
-    background-color: #f8f7f6;
-    font-family:"adobe-caslon-pro";
 }
 
-#banniere{
-    position: relative;
-    text-align: center;
-    margin: 2%;
-}
-
-#banniere img{
-    width: 711px;
-    height: 473px;
-}
-
-.p{
-    font-size: 30px;
-    font-style: italic;
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-}
-
-#Recettes{ /*ensemble des 3 recettes*/
-    text-align: center;
-    margin: 70px;
-}
-
-#Recettes li{ /*recette une par une*/
-    display: inline-block;
-    justify-content: space-between;
-    width: 310px;
-    height: 420px;
-    background-color: black;
-
-}
-
-#categories{ /*ensemble des catégories*/
-    text-align: center;
-}
-
-#categories button{ /*categorie une par une*/
-    width: 119px;
-    height: 151px;
-    border-radius: 20px;
-    border-style: none;
-    font-size: 16px;
-    font-weight: bold;
-    margin: 40px;
-    padding: 85px 4px 6px;
-    display: inline-block;
-    background-color: white;/*#c85103*/
-    color: black;
-    box-shadow:rgb(0 0 0 / 10%) 0px 0px 10px;
-    cursor: pointer;
-    position: relative;
-    
-}
-
-#categories button:hover{ /*quand on passe la souris dessus*/
-   background-color: whitesmoke;
-}
-
-#categories img{
-    width: 80px;
-    height: 80px;
-    background-color: white;
-    position: absolute;
-    top: 10px;
-    left: 20px;
-}
-
-h4{
-    font-size: 40px;
-    text-align: center;
-}
-
-@font-face {
-  font-family: 'Montserrat'; /*a name to be used later*/
-  src: url('police/Montserrat-Regular.ttf'); /*URL to font*/
-
-}
-
-h3{
-  font-family: 'Montserrat'; 
-  font-size: 30px;
-  color: white;
-  font-weight: bold;
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1rem;
+  line-height: 1.5;
+  box-sizing: border-box;
+  justify-content: center;
 }
