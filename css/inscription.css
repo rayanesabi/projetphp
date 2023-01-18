@@ -1,4 +1,5 @@
 @import url("navbar.css");
+
 body{
     background-color: #FDF6F0;
 }
@@ -9,7 +10,7 @@ h3{
 }
 
 #connect{
-    margin: 150px;
+    margin: 100px;
     padding: 0;
     font-family: sans-serif; 
     text-align: center;
@@ -56,6 +57,7 @@ input[type="email"], input[type="password"], input[type="text"]  {  /*formulaire
    opacity: 20%;
    cursor: pointer;
    margin-right: 20px;
+   text-decoration: none;
 }
 
 #inscription{
