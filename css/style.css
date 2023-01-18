@@ -93,12 +93,9 @@ h4{
     fill: orange;
     cursor: pointer;
 }
-.rating a:hover ~ a,
-.rating a:focus ~ a {
-    color: orange;
-}
+
 .rating {
-    justify-content: center;
+    display: flex;
     flex-direction: row-reverse;
     margin-left: 35%;
 }
