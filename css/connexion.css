@@ -5,7 +5,7 @@ body{
 }
 
 #connect{
-    margin: 150px;
+    margin: 100px;
     padding: 0;
     font-family: sans-serif; 
     text-align: center;
@@ -56,4 +56,5 @@ input[type="email"], input[type="password"] {  /*formulaire avec tous les inputs
 #inscription{
     opacity: 20%;
     cursor: pointer;
+    text-decoration: none;
 }

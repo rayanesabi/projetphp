@@ -12,6 +12,7 @@
 .navbar li{
     display:inline-block;
     color: #a17d60;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .navbar li a {
