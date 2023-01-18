@@ -1,3 +1,6 @@
+@import url("navbar.css");
+@import url("footer.css");
+
 body{ /*style de la page entière*/
   background-color: #FDF6F0;
   color: #212529;

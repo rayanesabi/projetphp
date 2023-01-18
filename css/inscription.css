@@ -1,4 +1,5 @@
 @import url("navbar.css");
+@import url("footer.css");
 
 body{
     background-color: #FDF6F0;
@@ -35,8 +36,13 @@ input[type="file"]{
     position: inherit;
     margin: 20px auto;
     font-size: 13px;
-    height: 40px;
-    width: 220px;
+}
+
+form img {
+    display: block;
+    position: inherit;
+    margin: 20px auto;
+    font-size: 9px;
 }
 
 .boutonLog{ /*bouton se connecter et s'inscrire*/

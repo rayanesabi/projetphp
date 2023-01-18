@@ -1,5 +1,5 @@
 @import url("navbar.css");
-
+@import url("footer.css");
 
 body{ /*style de la page entière*/
     background-color: #FDF6F0;
@@ -93,12 +93,9 @@ h4{
     fill: orange;
     cursor: pointer;
 }
-.rating a:hover ~ a,
-.rating a:focus ~ a {
-    color: orange;
-}
+
 .rating {
-    justify-content: center;
+    display: flex;
     flex-direction: row-reverse;
     margin-left: 35%;
 }
@@ -130,12 +127,11 @@ h4{
     text-align: center;
     display: flex;
     justify-content: space-evenly;
-    height: 100px;
-    margin-right: 35%;
-    margin-left: 35%;
-    border: 1px solid black;
+    margin-right: 20%;
+    margin-left: 20%;
     align-items: center;
-    height: 80%;
+    height: 100%;
+    background-color: #FDF6F0;
 }
 
 .cuisson, .preparation, .repos {
