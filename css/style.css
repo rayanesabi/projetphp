@@ -108,11 +108,6 @@ h4{
     flex-direction: column;
 }
 
-.corps img {
-    width: 30%;
-    height: 30%;
-    align-items: center;
-}
 
 .box_image {
     text-align: center;    
