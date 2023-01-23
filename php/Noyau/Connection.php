@@ -54,54 +54,33 @@ final class Connection {
         }
         return $value;
     }
-    public function delete(string $S_table, array $A_parametres) {
-        //$attributs = implode(', ', array_keys($A_parametres));
-        //$valueKeys = implode(', ', array_map(
-         //   fn(string $value) => ':'.$value,
-          //  array_keys($A_parametres)
-        //));
-        $query = sprintf(' Delete from %s ', $S_table);
-        $stmt = $this->pdo->prepare($query);
-       // foreach($A_parametres as $attribut => $value) {
-        //    $stmt->bindParam($attribut, $value);
-       // }
-        $value = $stmt->execute();
+    public function delete(string $S_table, $where) {
+        $query = "DELETE FROM $S_table WHERE $where";
 
-        if (false === $value) {
-            throw new RuntimeException(
-                sprintf(
-                    "Cannot insert value for table %s and value %s. SQL error code : %s. SQL error info : %s",
-                    $S_table,
-                    json_encode($A_parametres),
-                    $stmt->errorCode(),
-                    json_encode($stmt->errorInfo())
-                ));
+        try {
+            $stmt = $this->pdo->prepare($query);
+            $stmt->execute();
+            return true;
+        } catch (PDOException $e) {
+            die('Error : ' . $e->getMessage());
         }
-        return $value;
-    }    public function update(string $S_table, array $A_parametres) {
-    //$attributs = implode(', ', array_keys($A_parametres));
-    $valueKeys = implode(', ', array_map(
-        fn(string $value) => ':'.$value,
-        array_keys($A_parametres)
-    ));
-    $query = sprintf(' Update %s  set (%s)', $S_table, $valueKeys);
-    $stmt = $this->pdo->prepare($query);
-    foreach($A_parametres as $attribut => $value) {
-        $stmt->bindParam($attribut, $value);
     }
-    $value = $stmt->execute();
-
-    if (false === $value) {
-        throw new RuntimeException(
-            sprintf(
-                "Cannot insert value for table %s and value %s. SQL error code : %s. SQL error info : %s",
-                $S_table,
-                json_encode($A_parametres),
-                $stmt->errorCode(),
-                json_encode($stmt->errorInfo())
-            ));
+    public function update(string $S_table, $data, $where) {
+        $query = "UPDATE $S_table SET ";
+        $parameters = array();
+        foreach ($data as $key => $value) {
+            $parameters[] = "$key = :$key";
+        }
+        $query .= implode(', ', $parameters);
+        $query .= " WHERE $where";
+            try {
+        $stmt = $this->pdo->prepare($query);
+        $stmt->execute($data);
+        return true;
+    } catch (PDOException $e) {
+        die('Error : ' . $e->getMessage());
     }
-    return $value;
-
 }
+
+
 }

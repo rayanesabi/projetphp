@@ -1,42 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Page utilisateur</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Mon compte</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
 <div class="container">
-    <h1>Bienvenue, <?php echo $_SESSION['user']['username']; ?>!</h1>
+    <h1>Mon compte</h1>
     <div class="user-info">
-        <p>Nom : <?php echo $_SESSION['user']['nom']; ?></p>
-        <p>Prénom : <?php echo $_SESSION['user']['prenom']; ?></p>
-        <p>Email : <?php echo $_SESSION['user']['email']; ?></p>
+        <p>Nom d'utilisateur : <?= $_SESSION['user']['pseudo'] ?></p>
+        <p>Adresse email : <?= $_SESSION['user']['email'] ?></p>
     </div>
-    <form action="logout.php" method="post">
-        <input type="submit" value="Se déconnecter">
-    </form>
+    <div class="actions">
+        <a href="update.php" class="btn">Modifier les informations</a>
+        <a href="delete.php" class="btn">Supprimer le compte</a>
+    </div>
 </div>
 </body>
-<style>
-        body {
-font-family: Arial, sans-serif;
-background-color: #f5f5f5;
-}
-
-.container {
-max-width: 800px;
-margin: 0 auto;
-text-align: center;
-padding: 20px;
-}
-
-.user-info {
-margin-top: 20px;
-text-align: left;
-}
-
-form {
-margin-top: 20px;
-}
-</style>
 </html>
+<style>
+    .container {
+        width: 50%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .user-info {
+        margin-bottom: 20px;
+    }
+
+    .actions {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        text-decoration: none;
+        color: #fff;
+        background-color: #333;
+        border-radius: 5px;
+    }
+
+</style>
+

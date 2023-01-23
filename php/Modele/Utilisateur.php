@@ -1,15 +1,37 @@
 <?php
-class Utilisateur {
-    public string $pseudo;
-    public string $email;
-    public string $mdp;
+class Utilisateur
+{
+    private $connection;
 
-    public function enregistrer() {
-        // Initialiser la connexion à la base de données
-        $pdo = Connection::getInstance();
-        // Préparer la requête d'insertion
-            $pdo->insert('Utilisateurs', ['pseudo' => $this->pseudo, 'mdp' => $this->mdp, 'email' => $this->email]);
-        // Fermer la connexion à la base de données
-        //$pdo = null;
+    public function __construct() {
+        $this->connection = Connection::getInstance();
     }
+    public function estValide()
+    {
+        return !empty($this->pseudo) && !empty($this->email) && !empty($this->mdp) && !empty($this->mdpConfirme)
+            && $this->mdp === $this->mdpConfirme;
+    }
+    public function inscription($username, $email, $password) {
+        $password = password_hash($password, PASSWORD_DEFAULT);
+        $data = [$username, $email, $password];
+        $this->connection->insert("INSERT INTO users (username, email, password) VALUES (?, ?, ?)", $data);
+        header('Location:/Vues/Compte/voir.php');
+    }
+    public function modifier($username, $email, $password) {
+        $password = password_hash($password, PASSWORD_DEFAULT);
+        $data = [$username, $email, $password, $_SESSION['user']['id']];
+        $this->connection->update("UPDATE users SET username = ?, email = ?,password = ? WHERE id = ?", $data);
+    }
+    public function connexion($username, $password) {
+        $data = [$username];
+        $user = $this->connection->select("SELECT * FROM users WHERE username = ?", $data);
+        if ($user && password_verify($password, $user['password'])) {
+            $_SESSION['user'] = $user;
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
 }
