@@ -16,10 +16,10 @@
     <ul>
         <li><a id="logo"><h2>Caramelange</h2><img src="../images/logo.png"></a></li>
         <li><a><input type="search" placeholder="Rechercher...."><button class="go" type="submit">go</button></a>  </li>
-        <li><a id="accueil" href="http://localhost:63342/projetphp/php/Controleurs/ControleurAccueil.php?action=home">ACCUEIL</a></li>
-        <li><a id="connex" href="index.php?action=login">CONNEXION </a></li>
+        <li><a id="accueil" href="index.php?url=Accueil">ACCUEIL</a></li>
+        <li><a id="connex" href="C:\Users\Ryasa\PhpstormProjects\projetphp\php\index.php?url=Inscription">CONNEXION </a></li>
         <li>|</li>
-        <li><a id="inscr" href="index.php?action=register">INSCRIPTION</a></li>
+        <li><a id="inscr" href="index.php=url=Inscription">INSCRIPTION</a></li>
     </ul>
 </nav>
 <div id="banniere">

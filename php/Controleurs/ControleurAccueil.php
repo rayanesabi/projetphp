@@ -1,8 +1,7 @@
 <?php
-
 final class ControleurAccueil
 {
-    public function defaultAction() {
+    public function defautAction() {
         if (isset($_GET['action'])) {
             switch ($_GET['action']) {
                 case 'login':
@@ -21,7 +20,9 @@ final class ControleurAccueil
     }
     public function home() {
         // Charge la vue pour la page d'accueil
-    Vue::montrer('Accueil/voir.php');
+        $O_Accueil = new Accueil();
+        $articles = $O_Accueil->getFeaturedArticles();
+        Vue::montrer('Accueil/voir');
     }
     public function login() {
         // Charge la vue pour la page de connexion
@@ -31,4 +32,6 @@ final class ControleurAccueil
         // Charge la vue pour la page d'inscription
         Vue::montrer('connexionn.php');
     }
+
+
 }

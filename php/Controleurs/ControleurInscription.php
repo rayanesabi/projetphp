@@ -2,46 +2,38 @@
 class ControleurInscription
 {
 
-    public function defaultAction()
+    public function defautAction()
     {
-        $O_Utilisateur = new Utilisateur();
-        // Vérifie si l'utilisateur est connecté
-        if (isset($_SESSION['user'])) {
-            // Récupère les données de l'utilisateur connecté
-            $user = $_SESSION['user'];
-            // Charge la vue pour l'utilisateur connecté
-            Vue::montrer('Compte/voir');
-        } else {
-            // Redirige l'utilisateur vers la page de connexion
-            Vue::montrer('inscriptionn');
-        }
+        $O_Inscription = new Inscription();
+
+        Vue::montrer('inscriptionn');
     }
 
     public function creerUtilisateurAction(array $urlParameters, array $A_postParams = null)
     {
-        if (isset($A_postParams['register'])) {
-            $username = $A_postParams['pseudo'];
-            $email = $A_postParams['mail'];
+            $pseudo = $A_postParams['pseudo'];
+            $email = $A_postParams['email'];
             $mdp = $A_postParams['mdp'];
             $mdpConfirme =  $A_postParams['mdpConfirme'];
-            $userModel = new Utilisateur();
-            if ($userModel->estValide()){
-            $userModel->inscription($username, $email, $mdp);
-            // Enregistrement réussi, rediriger l'utilisateur vers la page de connexion
-            Vue::montrer('Compte/voir');
+
+            $O_Inscription = new Inscription();
+            if ($O_Inscription->estValide($pseudo, $email, $mdp, $mdpConfirme)){
+                $O_Inscription->verificationEmail($email);
+                $O_Inscription->inscription($email, $mdp, $pseudo);
+                // Enregistrement réussi, rediriger l'utilisateur vers la page de connexion
             } else {
                 // Enregistrement échoué, afficher un message d'erreur
                 echo 'Erreur lors de l\'inscription';
-
             }
-        }
+
     }
+
     public function connexionAction() {
         if (isset($_POST['login'])) {
             $username = $_POST['pseudo'];
             $password = $_POST['mdp'];
 
-            $userModel = new Utilisateur();
+            $userModel = new Connexion();
             if ($userModel->connexion($username, $password)) {
                 // Connexion réussie, rediriger l'utilisateur vers la page d'accueil
                 Vue::montrer('Compte/voir');

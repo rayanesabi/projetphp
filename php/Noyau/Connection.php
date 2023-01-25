@@ -31,7 +31,7 @@ final class Connection {
     public function insert(string $S_table, array $A_parametres): bool {
         $attributs = implode(', ', array_keys($A_parametres));
         $valueKeys = implode(', ', array_map(
-            fn(string $value) => ':'.$value, 
+            fn(string $value) => ':'.$value,
             array_keys($A_parametres)
         ));
         $query = sprintf(' Insert into %s (%s) values  (%s)', $S_table, $attributs, $valueKeys);
@@ -41,7 +41,6 @@ final class Connection {
             $stmt->bindParam($attribut, $value);
         }
         $value = $stmt->execute();
-
         if (false === $value) {
             throw new RuntimeException(
                 sprintf(

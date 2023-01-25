@@ -20,12 +20,12 @@
     </ul>
 </nav>
 <div id="connect">
-    <form>
-        <div id="Onglet">
-            <a id="connexion"><h3>SE CONNECTER</a>   <a id="inscription" href="inscriptionn.php">S'INSCRIRE</a></h3>
+    <form method="post" action="../php/index.php?url=Connexion/connexion">
+    <div id="Onglet">
+            <a id="connexion"><h3>SE CONNECTER</a>   <a id="inscription" href="../php/index.php?url=Inscription">S'INSCRIRE</a></h3>
         </div>
-        <input type="email" placeholder="E-MAIL">
-        <input type="password" placeholder="MOT DE PASSE">
+        <input type="email" name="email" placeholder="E-MAIL">
+        <input type="password" name="mdp" placeholder="MOT DE PASSE">
         <button class="boutonLog" type="submit">LET'S COOK</button>
     </form>
 </div>
@@ -34,3 +34,66 @@
 </div>
 </body>
 </html>
+<style>
+    @import url("/css/navbar.css");
+    @import url("/css/footer.css");
+    body{
+        background-color: #FDF6F0;
+    }
+
+    #connect{
+        margin: 100px;
+        padding: 0;
+        font-family: sans-serif;
+        text-align: center;
+    }
+
+    input[type="email"], input[type="password"] {  /*formulaire avec tous les inputs*/
+        box-sizing: border-box;
+        display: block;
+        position: inherit;
+        margin: 5px auto;
+        font-size: 13px;
+        background: transparent;
+        border: none;
+        border-bottom: 2px solid rgb(152, 151, 151);
+        outline: none;
+        height: 40px;
+        width: 220px;
+    }
+
+    .boutonLog{ /*bouton se connecter et s'inscrire*/
+        border-radius: 6px;
+        outline: none;
+        background: #a17d60;
+        color: white;
+        font-size: 13px;
+        cursor: pointer;
+        padding: 8px 80px;
+        position: relative;
+        margin: 20px;
+        margin-bottom: 55px;
+    }
+
+    .boutonLog:hover{
+        background-color: #dbb79a;
+    }
+
+    #Onglets{
+        box-sizing: border-box;
+        display: inline-block;
+        position: relative;
+    }
+
+    #connexion{
+        border-bottom: 3px solid rgb(85, 44, 44);
+        margin-right: 20px;
+    }
+
+    #inscription{
+        opacity: 20%;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+</style>
