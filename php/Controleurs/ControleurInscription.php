@@ -14,13 +14,13 @@ class ControleurInscription
             $pseudo = $A_postParams['pseudo'];
             $email = $A_postParams['email'];
             $mdp = $A_postParams['mdp'];
-            $photo = file_get_contents($_FILES['photo']['tmp_name']);
+            $pp = file_get_contents($_FILES['pp']['tmp_name']);
             $mdpConfirme =  $A_postParams['mdpConfirme'];
 
             $O_Inscription = new Inscription();
             if ($O_Inscription->estValide($pseudo, $email, $mdp, $mdpConfirme)){
                 $O_Inscription->verificationEmail($email);
-                $O_Inscription->inscription($email, $mdp, $pseudo, $photo );
+                $O_Inscription->inscription($email, $mdp, $pseudo, $pp );
                 // Enregistrement réussi, rediriger l'utilisateur vers la page de connexion
             } else {
                 // Enregistrement échoué, afficher un message d'erreur

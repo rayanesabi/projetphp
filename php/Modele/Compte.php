@@ -12,10 +12,45 @@ class Compte {
             header('Location: ../php/Vues/Compte/voir.php');
         }
     }
+    public function login(){
+        if(isset($_POST['pseudo']) && isset($_POST['mdp'])){
+            $username = $_POST['pseudo'];
+            $mdp = $_POST['mdp'];
+            //Vérifie les informations de l'utilisateur avec la base de données
+            //Si les informations sont correctes
+            if(checkLogin($username, $mdp)){
+                //Stocke les informations de l'utilisateur dans une variable de session
+                $_SESSION['user'] = getUser($username);
+                //Redirige vers la page d'accueil
+                header('Location: index.php');
+            }else{
+                //Charge la vue pour la page de connexion avec un message d'erreur
+                $error = "Nom d'utilisateur ou mot de passe incorrect";
+                require_once 'Vues/connexionn.php';
+            }
+        }else{
+            //Charge la vue pour la page de connexion
+            require_once 'Vues/connexionn.php';
+        }
+    }
+    private function checkLogin($pseudo, $mdp) {
+        // Connexion à la base de données
+        $pdo = Connection::getInstance()->pdo;
+        // Vérification des informations de l'utilisateur avec la base de données
+        $stmt = $pdo->prepare("SELECT * FROM utilisateurs WHERE pseudo = ? AND mdp = ?");
+        $stmt->bind_param("ss", $pseudo, $mdp);
+        $stmt->execute();
+        $result = $stmt->get_result();
 
+        // Si les informations sont correctes
+        if ($result->num_rows == 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
-
-    public function getUser($pseudo) {
+    private function getUser($pseudo) {
         // Connexion à la base de données
         $pdo = Connection::getInstance()->pdo;
 
@@ -32,14 +67,6 @@ class Compte {
         $mdphash = password_hash($mdp, PASSWORD_DEFAULT);
         $stmt= $this->pdo->prepare('UPDATE utilisateurs SET pseudo = ?, email = ?,mdp = ? WHERE id_utilisateur = ?');
         $stmt->execute(array($pseudo, $mdphash, $email,$_SESSION['user']['id'] ));
-    }
-
-    public function test($id_utilisateur, $libelle, $note) {
-        $date = date('y-m-d');
-        $insert = $this->pdo->prepare('INSERT INTO commentaires(id_utilisateur, libelle, note, date) VALUES(?, ?, ?, ?)');
-        $insert->execute(array($id_utilisateur, $libelle, $note, $date));
-        header('Location:../php/index.php?url=Recette.php');
-        die();
     }
 
 }

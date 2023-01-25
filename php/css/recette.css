@@ -79,7 +79,7 @@ img:hover {
 
 .card-title {
   font-family: 'Great Vibes', cursive;
-  color: #ff5733;
+  color: #a17d60;
   font-size: 30px;
   text-decoration: none;
   margin-bottom: 1.5rem;
@@ -106,3 +106,10 @@ img:hover {
   box-sizing: border-box;
   justify-content: center;
 }
+
+#Recettes li {
+  background-size: cover;
+  background-position: center;
+  width: 200px;
+  height: 200px;
+} 

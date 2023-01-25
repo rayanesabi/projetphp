@@ -8,9 +8,6 @@
     position: -webkit-sticky;
     position:sticky;
 }
-#url {
-    display: none;
-}
 
 .navbar li{
     display:inline-block;
@@ -37,7 +34,7 @@
     padding: 0vw 0vw;
 }
 
-input[type="text"] {
+input[type="search"] {
     width: 500px;
     padding: 12px 20px;
     margin: 8px 0;
@@ -47,7 +44,7 @@ input[type="text"] {
     
   }
 
-  input[value="Rechercher"] {
+  .go {
     width: 10%;
     background-color: #a17d60;
     color: white;
@@ -57,7 +54,6 @@ input[type="text"] {
     border-radius: 4px;
     cursor: pointer;
   }
-
   
   #logo img {
     width: 70px;
