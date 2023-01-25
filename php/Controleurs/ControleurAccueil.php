@@ -5,10 +5,10 @@ final class ControleurAccueil
         if (isset($_GET['action'])) {
             switch ($_GET['action']) {
                 case 'login':
-                    $this->login();
+                    $this->loginAction();
                     break;
                 case 'register':
-                    $this->register();
+                    $this->registerAction();
                     break;
                 default:
                     $this->home();
@@ -24,13 +24,13 @@ final class ControleurAccueil
         $articles = $O_Accueil->getFeaturedArticles();
         Vue::montrer('Accueil/voir');
     }
-    public function login() {
+    public function loginAction() {
         // Charge la vue pour la page de connexion
-        Vue::montrer('inscriptionn.php');
+        Vue::montrer('inscriptionn');
     }
-    public function register() {
+    public function registerAction() {
         // Charge la vue pour la page d'inscription
-        Vue::montrer('connexionn.php');
+        Vue::montrer('connexionn');
     }
 
 

@@ -1,18 +1,21 @@
-@import url("navbar.css");
-@import url("footer.css");
 
 body{
     background-color: #FDF6F0;
 }
 
-#connect{
+h3{
+    display: block;
+    justify-content: space-evenly;
+}
+
+#formulaire{
     margin: 100px;
     padding: 0;
     font-family: sans-serif; 
     text-align: center;
 }
 
-input[type="email"], input[type="password"] {  /*formulaire avec tous les inputs*/
+input[type="email"], input[type="password"], input[type="text"] {  /*formulaire avec tous les inputs*/
     box-sizing: border-box;
     display: block;
     position: inherit;
@@ -24,6 +27,20 @@ input[type="email"], input[type="password"] {  /*formulaire avec tous les inputs
     outline: none;
     height: 40px;
     width: 220px;
+}
+
+input[type="file"]{
+    display: block;
+    position: inherit;
+    margin: 20px auto;
+    font-size: 13px;
+}
+
+form img {
+    display: block;
+    position: inherit;
+    margin: 20px auto;
+    font-size: 9px;
 }
 
 .boutonLog{ /*bouton se connecter et s'inscrire*/
@@ -50,12 +67,12 @@ input[type="email"], input[type="password"] {  /*formulaire avec tous les inputs
 }
 
 #connexion{
-    border-bottom: 3px solid rgb(85, 44, 44);
-    margin-right: 20px;
+   opacity: 20%;
+   cursor: pointer;
+   margin-right: 20px;
+   text-decoration: none;
 }
 
 #inscription{
-    opacity: 20%;
-    cursor: pointer;
-    text-decoration: none;
+    border-bottom: 3px solid rgb(85, 44, 44);
 }

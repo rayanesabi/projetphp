@@ -10,3 +10,6 @@
         <?php Vue::montrer('standard/pied'); ?>
     </body>
 </html>
+<style>
+
+</style>

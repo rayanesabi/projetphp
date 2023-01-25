@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link r type="text/css" href="../css/footer.css">
+    <link r type="text/css" href="../../css/footer.css">
     <script src=""></script> <!-- Inclure ici votre js -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> <!-- Inclure ici votre favicon -->
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -17,3 +17,6 @@
 </body>
 
 </html>
+<style>
+    @import url("/php/css/footer.css");
+</style>
