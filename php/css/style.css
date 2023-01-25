@@ -1,0 +1,211 @@
+@import url("navbar.css");
+@import url("footer.css");
+
+body{ /*style de la page entière*/
+    background-color: #FDF6F0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#banniere{
+    position: relative;
+    text-align: center;
+    margin: 2%;
+}
+
+#banniere img{
+    width: 711px;
+    height: 473px;
+}
+
+.p{
+    font-size: 30px;
+    font-style: italic;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+#Recettes{ /*ensemble des 3 recettes*/
+    text-align: center;
+    margin: 70px;
+}
+
+#Recettes li{ /*recette une par une*/
+    display: inline-block;
+    justify-content: space-between;
+    width: 310px;
+    height: 420px;
+    background-color: black;
+
+}
+
+#categories{ /*ensemble des catégories*/
+    text-align: center;
+}
+
+#categories button{ /*categorie une par une*/
+    width: 119px;
+    height: 151px;
+    border-radius: 20px;
+    border-style: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 40px;
+    padding: 85px 4px 8px;
+    display: inline-block;
+    background-color: white;/*#c85103*/
+    color: black;
+    box-shadow:rgb(0 0 0 / 10%) 0px 0px 10px;
+    cursor: pointer;
+    position: relative;
+    
+}
+
+#categories button:hover{ /*quand on passe la souris dessus*/
+   background-color: whitesmoke;
+}
+
+#categories img{
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 15px;
+    left: 25px;
+}
+
+h4{
+    font-size: 40px;
+    text-align: center;
+}
+.rating a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 3em;
+    transition: color .4s;
+}
+
+.rating a:hover,
+.rating a:focus {
+    fill: orange;
+    cursor: pointer;
+}
+
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-left: 35%;
+}
+
+.corps {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.box_image {
+    text-align: center;    
+}
+
+.cmb_personnes {
+    font-size: 20px;
+    padding-top: 20px;
+    margin-right: 35%;
+}
+
+.avis {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.temps_total_preparation {
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 20%;
+    margin-left: 20%;
+    align-items: center;
+    height: 100%;
+    background-color: #FDF6F0;
+}
+
+.cuisson, .preparation, .repos {
+    font-size: 20px;
+}
+
+.corps_étape {
+    background-color: white;
+    display: flex;
+}
+
+#Commentaires{
+    display: flex;
+    align-items: baseline;
+    margin-left: 150px;
+}
+
+#ligneComm{
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    height: 2px;
+    color: black;
+    background-color: black;
+    width: 620px;
+}
+
+.container{
+    padding: 20px 60px;
+    margin: 150px;
+    border-radius: 30px;
+    background-color:white ;
+    box-shadow:rgb(0 0 0 / 10%) 0px 0px 10px;
+}
+
+#CommentairesBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#CommentairesBox textarea{
+    border-radius: 4px;
+    font-size: 1vw;
+}
+
+ #submitComment{
+    text-align: center;
+    text-decoration: none;
+    font-size: 1vw;
+    transition-duration: 0.2s;
+    background-color: #c85103;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-left: 1vw;
+    padding: 0.5vw 1vw;
+    cursor: pointer;
+}
+
+
+#commentInput{
+    min-width : 30vw;
+    height: 6vh;
+    resize : none;
+}
+
+#CommentairesBox button:hover{
+    background-color: #cd885b;
+    color: rgb(24, 22, 22);
+}
+
+.profilePicture{
+    width: 60px;
+    height: 60px;
+}
