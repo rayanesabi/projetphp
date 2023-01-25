@@ -65,13 +65,14 @@
     <button id="submitComment">Ajouter</button>
 </div>
 <ul id="comments">
-  <li class='commentArea'>
-    <div class='profile'>
-        <img class='profilePicture' src='../images/avatar.png'>
-        <p class='profileName'>$userPseudo</p>
-    </div>
-    <p class = 'commentsTexts'> $commentText </p>
-</li>
+  <script>
+  $.ajax({
+       url: '../phpmvc/Modele/AfficherComm.php',
+       success: function(data){
+          $('#comments').html(data);
+       }
+  });
+  </script>
 </ul>
 </div>
 <div id="footer">
