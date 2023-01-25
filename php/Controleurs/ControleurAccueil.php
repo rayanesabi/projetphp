@@ -20,9 +20,12 @@ final class ControleurAccueil
     }
     public function home() {
         // Charge la vue pour la page d'accueil
-        $O_Accueil = new Accueil();
-        $articles = $O_Accueil->getFeaturedArticles();
         Vue::montrer('Accueil/voir');
+    }
+
+    public function afficheRecetteAction(){
+        $O_Accueil = new Accueil();
+        Vue::montrer('Accueil/Resultats', array('Recettes', $O_Accueil->getFeaturedArticles()));
     }
     public function loginAction() {
         // Charge la vue pour la page de connexion
@@ -33,9 +36,9 @@ final class ControleurAccueil
         Vue::montrer('connexionn');
     }
     public function rechercheAction($saisie) {
-        $recherche = $saisie[0]; // Récupération de la recherche à partir des paramètres
-        $resultats = Recherche::rechercher($recherche); // Appel de la fonction de recherche
-        require_once 'Vues/resultats.php'; // Chargement de la vue pour afficher les résultats
+        $O_recherche = new Accueil();
+        $saisie = $_GET['saisie']; // Récupération de la recherche à partir des paramètres
+        Vue::montrer('Accueil/voir', array('recherche' =>  $O_recherche->recherche($saisie)));
     }
 
 

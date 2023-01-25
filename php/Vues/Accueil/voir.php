@@ -30,6 +30,9 @@
     <button><img src="Vues/images/vegan.png">Vegan</button>
     <button><img src="Vues/images/niveau.png">Facile</button>
 </div>
+<p>
+    <?php print_r($A_vue['Recette']) ?>
+</p>
 <br>
 <br>
 <br>
