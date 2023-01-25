@@ -5,25 +5,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="../../css/style.css" rel="stylesheet">
-    <link href="../../css/navbar.css" rel="stylesheet">
-    <link href="../../css/footer.css" rel="stylesheet">
     <title>Caramelange</title>
-    <link href="../images/caramel.png" rel="icon">
+    <link href="/php/Vues/images/caramel.ico" rel="icon">
+
 </head>
 <body>
-<nav class="navbar">
-    <ul>
-        <li><a id="logo"><h2>Caramelange</h2><img src="../images/logo.png"></a></li>
-        <li><a><input type="search" placeholder="Rechercher...."><button class="go" type="submit">go</button></a>  </li>
-        <li><a id="accueil" href="index.php?url=Accueil">ACCUEIL</a></li>
-        <li><a id="connex" href="C:\Users\Ryasa\PhpstormProjects\projetphp\php\index.php?url=Inscription">CONNEXION </a></li>
-        <li>|</li>
-        <li><a id="inscr" href="index.php=url=Inscription">INSCRIPTION</a></li>
-    </ul>
-</nav>
+
 <div id="banniere">
-    <img src="../images/cheescake.jpg">
+    <img src="Vues/images/cheescake.jpg">
     <div class="p">«Tout le monde peut pâtisser»</div>
 </div>
 <div id="Recettes">
@@ -35,11 +24,11 @@
 </div>
 <h4>Recettes par Catégorie</h4>
 <div id="categories">
-    <button><img src="../images/cheap.png">Bon marché</button>
-    <button><img src="../images/rapide.png">Rapide</button>
-    <button><img src="../images/chocolate.png">Au chocolat</button>
-    <button><img src="../images/vegan.png">Vegan</button>
-    <button><img src="../images/niveau.png">Facile</button>
+    <button><img src="Vues/images/cheap.png">Bon marché</button>
+    <button><img src="Vues/images/rapide.png">Rapide</button>
+    <button><img src="Vues/images/chocolate.png">Au chocolat</button>
+    <button><img src="Vues/images/vegan.png">Vegan</button>
+    <button><img src="Vues/images/niveau.png">Facile</button>
 </div>
 <br>
 <br>
@@ -47,8 +36,8 @@
 <br>
 <br>
 <br>
-<div id="footer">
-    <li><a>Copyright © 2022 Caramelange Inc. Tous droits réservés</a></li>
-</div>
 </body>
 </html>
+<style>
+    @import url("/php/css/style.css");
+</style>

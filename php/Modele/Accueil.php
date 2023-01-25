@@ -15,4 +15,12 @@ class Accueil
         return $stmt->fetch();
 
     }
+    public function recherche($saisie){
+        $stmt = $this->pdo->prepare("Select * from recette where nom LIKE :saisie ");
+        $saisie = '%' . $saisie . '%';
+        $stmt->bindParam(':query', $saisie);
+        $stmt->execute();
+        $result = $stmt->fetchAll();
+        return $result;
+    }
 }

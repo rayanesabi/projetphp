@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link type="text/css" rel="stylesheet" href="/php/css/inscription.css" >
     <title>Caramelange</title>
-    <link href="images/caramel.png" rel="icon">
 </head>
 
 <body>

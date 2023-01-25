@@ -32,6 +32,13 @@ final class ControleurAccueil
         // Charge la vue pour la page d'inscription
         Vue::montrer('connexionn');
     }
+    public function rechercheAction($saisie) {
+        $recherche = $saisie[0]; // Récupération de la recherche à partir des paramètres
+        $resultats = Recherche::rechercher($recherche); // Appel de la fonction de recherche
+        require_once 'Vues/resultats.php'; // Chargement de la vue pour afficher les résultats
+    }
+
+
 
 
 }

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Caramelange</title>
-    <link href="images/caramel.png" rel="icon">
+    <link href="images/caramel.ico" rel="icon">
 </head>
 <body>
 

@@ -17,11 +17,7 @@ class ControleurCompte {
         $compte = new Compte();
         $compte->home();
     }
-    public function login() {
-        $compte = new Compte();
-        $compte->login();
-    }
-    public function logout() {
+    public function logoutAction() {
         $compte = new Compte();
         $compte->logout();
     }
