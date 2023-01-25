@@ -22,16 +22,16 @@ $number_of_rows = count($resultats);
 </head>
 
 <body>
-    
+
     <div class="container">
         <div class="row">
 
             <?php
-                for ($x = 0; $x < $number_of_rows; ++$x)
+                for ($x = 0; $x < $number_of_rows; ++$x)   
                 echo '<div class="col-sm-4">' .
                         '<div class="card">'.
                             '<a href="002.html">' .
-                                '<img src='.base64_decode($resultats[$x]['Image']).'class="card-img-top" alt= '.$resultats[$x]['nom'].'>'.
+                            '<img src="data:image/png;base64,'.($resultats[$x]['Image']).'" class="card-img-top" alt='.$resultats[$x]['nom'].'>'.
                                 '<div class="card-body">'.
                                     '<h5 class="card-title text-center">'.$resultats[$x]['nom'].'</h5>'.
                                 '</div>'.

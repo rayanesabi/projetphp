@@ -40,11 +40,11 @@
     <br>
     <br>
     <br>
-    <script src="chemin/vers/votre/script.js"></script>
+    <script src="../php/js/script.js"></script>
 
 </body>
 
 </html>
 <style>
-@import url("/php/css/style.css");
+@import url("../php/css/style.css");
 </style>

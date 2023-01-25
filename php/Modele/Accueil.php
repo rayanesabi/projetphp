@@ -10,7 +10,7 @@ class Accueil
     public function getFeaturedArticles()
     {
         // Récupération des articles en utilisant la classe de connexion à la base de données
-        $stmt = $this->pdo->prepare("SELECT nom FROM recette ");
+        $stmt = $this->pdo->prepare("SELECT * FROM recette ");
         $stmt->execute();
         return $stmt->fetchAll();
 
