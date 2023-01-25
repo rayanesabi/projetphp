@@ -11,7 +11,8 @@
 <nav class="navbar">
     <ul>
         <li><a id="logo"><h2>Caramelange</h2><img src="Vues/images/logo.png"></a></li>
-        <li><a><input type="search" placeholder="Rechercher...."><button class="go" type="submit">go</button></a>  </li>
+        </form>
+        <li><a><input formmethod="get"  type="search" name="saisie" placeholder="Rechercher...."><button class="go" onclick="window.location.href = '../php/index.php?url=Accueil/recherche'" type="submit">go</button></a>  </li>
         <li><a id="accueil" href="../php/index.php">ACCUEIL</a></li>
         <li><a id="connex" href="../php/index.php?url=Connexion">CONNEXION </a></li>
         <li>|</li>
