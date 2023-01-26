@@ -20,7 +20,7 @@ final class ControleurAccueil
     }
     public function home() {
         $O_Accueil = new Accueil();
-        Vue::montrer('Accueil/resultats', array('Recettes', $O_Accueil->getFeaturedArticles()));
+        Vue::montrer('Accueil/voir', array('Recettes', $O_Accueil->getFeaturedArticles()));
     }
     public function loginAction() {
         // Charge la vue pour la page de connexion
