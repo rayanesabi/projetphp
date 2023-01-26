@@ -1,10 +1,3 @@
-<?php
-require_once '../Modele/Accueil.php';
-$test = new RecetteChoisie();
-$ty = $A_vue['Commentaires'];
-$number_of_rows = count($ty);
-//$resultats = $A_vue['RecetteChoisie'];
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,15 +5,27 @@ $number_of_rows = count($ty);
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../php/css/navbar.css" rel="stylesheet">
+  <link href="../php/css/style.css" rel="stylesheet">
+  <link href="../php/css/footer.css" rel="stylesheet">
   <title>Caramelange</title>
-
+  <link href="../php/Vues/images/caramel.ico" rel="icon">
 </head>
 
 <body>
-
+  <nav class="navbar">
+    <ul>
+      <li><a id="logo"><h2>Caramelange</h2><img src="../php/Vues/images/logo.png"></a></li>
+      <li><a><input type="search" placeholder="Rechercher...."><button class="go" type="submit">go</button></a>  </li>
+      <li><a id="accueil" href="../index.html">ACCUEIL</a></li>
+      <li><a id="connex" href="../pages/connexion.html">CONNEXION </a></li>
+      <li>|</li>
+      <li><a id="inscr" href="../pages/inscription.html">INSCRIPTION</a></li> 
+    </ul>
+  </nav>
  
   <div class="container">
-  <h4><?php //$resultats['ca'] ?>></h4>
+  <h4>Tarte aux pommes</h4>
 
   <div class="corps">
     <div class="avis">
@@ -36,7 +41,7 @@ $number_of_rows = count($ty);
       </div>
     </div>
     <div class="box_image">
-      <img src="images/scones.jpg" id="image">
+      <img src="../php/Vues/images/scones.jpg" id="image">
     </div>
     <div class="temps_total_preparation">
       <p>temps cuisson : <br>10min</p>
@@ -50,7 +55,7 @@ $number_of_rows = count($ty);
   </div>
  <!---divison commentaire--->
   <div id="Commentaires">
-    Commentaires (<?php print_r($number_of_rows) ?> avis)
+    Commentaires (145 avis)
     <div id="ligneComm">
     </div>
   </div>
@@ -60,25 +65,17 @@ $number_of_rows = count($ty);
     <button id="submitComment">Ajouter</button>
 </div>
 <ul id="comments">
-
-      <?php
-      for ($x = 0; $x < $number_of_rows; ++$x)
-          echo
-              '<li class="commentArea">' .
-              '<div class="profile">' .
-              '<img class="profilePicture">' . $ty[$x]['photo'] .
-              '<p class="profileName">' .  $ty[$x]['pseudo'] . '</p>' .
-              '</div>' .
-              '<p class = "commentsTexts">' .  $ty[$x]['libelle'] . '</p>' .
-              '<p class = "commentsNote">' .  $ty[$x]['note'] . '</p>' .
-              '<p class = "commentsDate">' .  $ty[$x]['date'] . '</p>' .
-              '</li>';
-          ?>
+  <li class='commentArea'>
+    <div class='profile'>
+        <img class='profilePicture' src='../php/Vues/images/avatar.png'>
+        <p class='profileName'>$userPseudo</p>
+    </div>
+    <p class = 'commentsTexts'> $commentText </p>
+</li>
 </ul>
 </div>
-
+<div id="footer">
+  <li><a>Copyright © 2022 Caramelange Inc. Tous droits réservés</a></li>
+</div>
 </body>
 </html>
-<style>
-    @import url("/php/css/style.css");
-</style>
