@@ -61,7 +61,7 @@ $number_of_rows = count($resultats);
             echo '<div class="col-sm-4">' .
                 '<div class="card">' .
                 '<a  href="../php/index.php?id_recette=' . $resultats[$x]['id_recette'] .'&url=RecetteChoisie">' .
-                '<img src="data:image/png;base64,' . $image . '"class="card-img-top" alt= ' . $resultats[$x]['nom'] . '>' .
+                '<img src="data:image/png;base64,' . $image . '" class="card-img-top" alt= ' . $resultats[$x]['nom'] . '>' .
                 '<div class="card-body">' .
                 '<h5 class="card-title text-center">' . $resultats[$x]['nom'] . '</h5>' .
                 '</div>' .
