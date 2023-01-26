@@ -1,8 +1,8 @@
 <?php
+require_once '../Modele/Accueil.php';
 $test = new Accueil();
-$ty = $test->afficher();
+$ty = $test->afficherCommentaires();
 $number_of_rows = count($ty);
-print_r($number_of_rows);
 ?>
 <!DOCTYPE html>
 <html lang="en">
