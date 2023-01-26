@@ -56,17 +56,20 @@ $number_of_rows = count($resultats);
     <div class="row">
 
         <?php
-        for ($x = 0; $x < $number_of_rows; ++$x)
+        for ($x = 0; $x < $number_of_rows  ; ++$x) {
+            $image = base64_encode($resultats[$x]['image']);
             echo '<div class="col-sm-4">' .
-                '<div class="card">'.
-                '<a href="002.html">' .
-                '<img src='./* mets base_encode afin d'afficher l'image*/ 'class="card-img-top" alt= '.$resultats[$x]['nom'].'>'.
-                '<div class="card-body">'.
-                '<h5 class="card-title text-center">'.$resultats[$x]['nom'].'</h5>'.
-                '</div>'.
-                '</a>'.
-                '</div>'.
-                '</div>'
+                '<div class="card">' .
+                '<a  href="../php/index.php?id_recette=' . $resultats[$x]['id_recette'] .'&url=RecetteChoisie">' .
+                '<img src="data:image/png;base64,' . $image . '"class="card-img-top" alt= ' . $resultats[$x]['nom'] . '>' .
+                '<div class="card-body">' .
+                '<h5 class="card-title text-center">' . $resultats[$x]['nom'] . '</h5>' .
+                '</div>' .
+                '</a>' .
+                '</div>' .
+                '</div>';
+                $_SESSION['id_recette'] = ($resultats[$x]['id_recette']);
+        }
         ?>
 
     </div>

@@ -14,7 +14,7 @@
         <li><a>
                 <form method="get" action="../php/index.php?url=Recherche" id ="form" >
                     <input type="text" name="saisie" placeholder="Rechercher...">
-                    <input type="text" name="url" value="Recherche" id="url">
+                    <input type="hidden" name="url" value="Recherche" id="url">
                     <input type="submit" value="Rechercher" form ="form">
                 </form>
             </a></li>

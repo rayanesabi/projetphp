@@ -1,8 +1,9 @@
 <?php
 require_once '../Modele/Accueil.php';
-$test = new Accueil();
-$ty = $test->afficherCommentaires();
+$test = new RecetteChoisie();
+$ty = $A_vue['Commentaires'];
 $number_of_rows = count($ty);
+//$resultats = $A_vue['RecetteChoisie'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +20,7 @@ $number_of_rows = count($ty);
 
  
   <div class="container">
-  <h4>Tarte aux pommes</h4>
+  <h4><?php //$resultats['ca'] ?>></h4>
 
   <div class="corps">
     <div class="avis">

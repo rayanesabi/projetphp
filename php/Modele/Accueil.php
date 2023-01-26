@@ -1,6 +1,5 @@
 <?php
 session_start();
-require_once '../Noyau/Connection.php';
 class Accueil
 {
     private $pdo;
@@ -23,10 +22,5 @@ class Accueil
         return $attributs;
     }
 
-    public function afficherCommentaires()
-    {
-        $stmt = $this->pdo->prepare("SELECT * FROM commentaires, utilisateurs where utilisateurs.id_utilisateur=commentaires.id_utilisateur ");
-        $stmt->execute();
-        return $stmt->fetchAll();
-    }
+
 }
