@@ -20,7 +20,8 @@ final class ControleurAccueil
     }
     public function home() {
         // Charge la vue pour la page d'accueil
-        Vue::montrer('Accueil/voir');
+        $O_Accueil = new Accueil();
+        Vue::montrer('pagerecette');
     }
 
     public function afficheRecetteAction(){
@@ -40,8 +41,6 @@ final class ControleurAccueil
         $saisie = $_GET['saisie']; // Récupération de la recherche à partir des paramètres
         Vue::montrer('Accueil/voir', array('recherche' =>  $O_recherche->recherche($saisie)));
     }
-
-
 
 
 }

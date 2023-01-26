@@ -25,4 +25,10 @@ class Accueil
         $result = $stmt->fetchAll();
         return $result;
     }
+    public function afficher()
+    {
+        $stmt = $this->pdo->prepare("SELECT * FROM commentaires, utilisateurs where utilisateurs.id_utilisateur=commentaires.id_utilisateur ");
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
 }
