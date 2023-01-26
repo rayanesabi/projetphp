@@ -46,9 +46,9 @@
 </body>
 
 <style>
-    @import url("../php/css/style.css");
-    @import url("../php/css/navbar.css");
-    @import url("../php/css/footer.css");
+    @import url("/php/css/style.css");
+    @import url("/php/css/navbar.css");
+    @import url("/php/css/footer.css");
 </style>
 
 
