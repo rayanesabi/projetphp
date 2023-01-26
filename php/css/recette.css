@@ -1,0 +1,115 @@
+@import url("navbar.css");
+@import url("footer.css");
+
+
+  body{ /*style de la page entière*/
+    background-color: #FDF6F0;
+    color: #212529;
+    text-align: left;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+
+  .card {
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      transition: 0.3s;
+      border:1px solid rgba(255,255,255, 0.18);
+      border-radius: 40px;
+      margin: 30px;
+      overflow: hidden;
+      word-wrap: break-word;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+
+    .container {
+      position: relative;
+      text-align: center;
+      color: white;
+      width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+  .card-container {
+      position: relative;
+      text-align: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      align-content: space-between;
+      margin: 10px 211px;
+  } 
+
+a {
+  color: black;
+  text-decoration: none;
+} 
+
+
+img {
+  border-start-start-radius: 20px;
+  transition: transform 0.3s, opacity 0.3s;
+  transform: scale(1);
+  object-fit: cover;
+  display: block;
+  text-decoration: none;
+}
+
+img:hover {
+    transform: scale(1.1);
+  }
+
+.card-img-top {
+  overflow: hidden;
+  width: 18rem;
+  height: 18rem;
+  box-shadow: 0px 0px 10px #ccc;
+  text-decoration: none;
+}
+
+.card-title {
+  font-family: 'Great Vibes', cursive;
+  color: #a17d60;
+  font-size: 30px;
+  text-decoration: none;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  margin-top: 0.9rem;
+}
+
+.card-body {
+  overflow: hidden;
+  background-color: white;
+  position: relative;
+  min-height: 1px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1rem;
+  line-height: 1.5;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+#Recettes li {
+  background-size: cover;
+  background-position: center;
+  width: 200px;
+  height: 200px;
+} 
