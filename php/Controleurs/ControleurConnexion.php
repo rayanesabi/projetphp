@@ -5,7 +5,7 @@ final class ControleurConnexion
     public function defautAction()
     {
         $O_Connexion =  new Connexion();
-        Vue::montrer('connexionn');
+        Vue::montrer('Connexion/voir');
     }
 
     public function connexionAction() {

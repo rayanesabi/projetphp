@@ -6,7 +6,7 @@ class ControleurInscription
     {
         $O_Inscription = new Inscription();
 
-        Vue::montrer('inscriptionn');
+        Vue::montrer('Inscription/voir');
     }
 
     public function creerUtilisateurAction(array $urlParameters, array $A_postParams = null)

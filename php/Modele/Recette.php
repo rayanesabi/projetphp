@@ -67,7 +67,7 @@ final class Recette {
     {
         // Connexion à la base de données
         // Préparation de la requête
-        $stmt = $this->pdo->prepare("SELECT * FROM recette order by difficulté desc ");
+        $stmt = $this->pdo->prepare("SELECT * FROM recette order by difficulté asc ");
 
         // Exécution de la requête
         $stmt->execute();
@@ -82,7 +82,7 @@ final class Recette {
     {
         // Connexion à la base de données
         // Préparation de la requête
-        $stmt = $this->pdo->prepare("SELECT * FROM recette order by difficulté asc ");
+        $stmt = $this->pdo->prepare("SELECT * FROM recette order by difficulté desc ");
 
         // Exécution de la requête
         $stmt->execute();
@@ -97,7 +97,7 @@ final class Recette {
     {
         // Connexion à la base de données
         // Préparation de la requête
-        $stmt = $this->pdo->prepare("SELECT * FROM recette order by cout desc ");
+        $stmt = $this->pdo->prepare("SELECT * FROM recette order by cout asc ");
 
         // Exécution de la requête
         $stmt->execute();
@@ -112,7 +112,7 @@ final class Recette {
     {
         // Connexion à la base de données
         // Préparation de la requête
-        $stmt = $this->pdo->prepare("SELECT * FROM recette order by cout asc ");
+        $stmt = $this->pdo->prepare("SELECT * FROM recette order by cout desc ");
 
         // Exécution de la requête
         $stmt->execute();
@@ -127,7 +127,7 @@ final class Recette {
     {
         // Connexion à la base de données
         // Préparation de la requête
-        $stmt = $this->pdo->prepare("SELECT * FROM recette order by tpstotal desc");
+        $stmt = $this->pdo->prepare("SELECT * FROM recette order by tpstotal asc");
 
         // Exécution de la requête
         $stmt->execute();
@@ -142,7 +142,7 @@ final class Recette {
     {
         // Connexion à la base de données
         // Préparation de la requête
-        $stmt = $this->pdo->prepare("SELECT * FROM recette order by tpstotal asc");
+        $stmt = $this->pdo->prepare("SELECT * FROM recette order by tpstotal desc");
 
         // Exécution de la requête
         $stmt->execute();

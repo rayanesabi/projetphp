@@ -29,13 +29,13 @@ final class ControleurAccueil
         // Charge la vue pour la page d'accueil
 
         $O_Accueil = new Accueil();
-        ;        Vue::montrer('connexionn');
+        ;        Vue::montrer('Connexion/voir');
     }
     public function registerAction() {
         // Charge la vue pour la page d'accueil
 
         $O_Accueil = new Accueil();
-        ;        Vue::montrer('inscriptionn');
+        ;        Vue::montrer('Connexion/voir');
     }
 
 
