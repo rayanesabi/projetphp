@@ -2,8 +2,6 @@
 
 final class Recette {
     private $pdo;
-    private string $nom;
-    private string $ingredients;
 
     public function donneRecette(){
         return ($this->nom .  $this->ingredients);

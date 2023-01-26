@@ -209,3 +209,46 @@ h4{
     width: 60px;
     height: 60px;
 }
+.commentArea{
+    background-color: #c85103;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    margin-bottom: 5vh;
+    margin-right: 3vw;
+    background: #c5beb9;
+    text-decoration: none;
+}
+
+.profile{
+    margin-right: 40px;
+    padding-right: 10px;
+    border-right: 2px solid;
+    border-color: gray;
+}
+.profileName{
+    margin-top: 0;
+    text-align: center;
+}
+
+.contenuComm{
+    display:inline-block;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.commentsDate{
+    color: rgb(96, 92, 92);
+}
+
+.commentsNote{
+    size: 10px;
+}
+
+.commentsTexts{
+    font-size: 1rem;
+    text-align: left;
+    word-wrap: break-word;
+}

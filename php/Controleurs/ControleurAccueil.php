@@ -4,10 +4,10 @@ final class ControleurAccueil
     public function defautAction() {
         if (isset($_GET['action'])) {
             switch ($_GET['action']) {
-                case 'login':
+                case 'Inscription':
                     $this->loginAction();
                     break;
-                case 'register':
+                case 'Connexion':
                     $this->registerAction();
                     break;
                 default:
@@ -19,22 +19,27 @@ final class ControleurAccueil
         }
     }
     public function home() {
+        // Charge la vue pour la page d'accueil
+
         $O_Accueil = new Accueil();
-        Vue::montrer('Accueil/voir', array('Recettes', $O_Accueil->getFeaturedArticles()));
+        ;        Vue::montrer('Accueil/voir');
     }
+
     public function loginAction() {
-        // Charge la vue pour la page de connexion
-        Vue::montrer('inscriptionn');
+        // Charge la vue pour la page d'accueil
+
+        $O_Accueil = new Accueil();
+        ;        Vue::montrer('connexionn');
     }
     public function registerAction() {
-        // Charge la vue pour la page d'inscription
-        Vue::montrer('connexionn');
+        // Charge la vue pour la page d'accueil
+
+        $O_Accueil = new Accueil();
+        ;        Vue::montrer('inscriptionn');
     }
-    public function rechercheAction($saisie) {
-        $O_recherche = new Accueil();
-        $saisie = $_GET['saisie']; // Récupération de la recherche à partir des paramètres
-        Vue::montrer('Accueil/voir', array('recherche' =>  $O_recherche->recherche($saisie)));
-    }
+
+
+
 
 
 

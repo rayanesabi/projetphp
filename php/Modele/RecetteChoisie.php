@@ -1,5 +1,5 @@
 
-<?php 
+<?php
 
 final class RecetteChoisie {
 
@@ -11,7 +11,7 @@ final class RecetteChoisie {
 
     /*Getters*/
     public function donneInfos() {
-        $result = $this->pdo->prepare("SELECT nom FROM recette"); 
+        $result = $this->pdo->prepare("SELECT nom FROM recette");
         $result-> execute();
         $data = array();
         if ($result->rowCount() > 0) {

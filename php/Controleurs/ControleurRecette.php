@@ -7,11 +7,11 @@ final class ControleurRecette
         $O_recette = new Recette();
         Vue::montrer('Recette/Resultats', array('recette' =>  $O_recette->afficheRecettes()));
     }
-    // public function saveAction(Array $A_postParams = null){
-    //     $recette = Recette::fromArray($A_postParams);
+    public function saveAction(Array $A_postParams = null){
+        $recette = Recette::fromArray($A_postParams);
 
-    //     $recette->save(Connection::getInstance());
-    // }
+        $recette->save(Connection::getInstance());
+    }
     public function rechercheAction($saisie) {
         $O_recherche = new Recette();
         $saisie = $_GET['saisie']; // Récupération de la recherche à partir des paramètres

@@ -58,8 +58,8 @@ $image = base64_encode($resultats['image']);
     </div>
     <!--espace Commentaires-->
     <div id="CommentairesBox">
-        <form method="post" action="../php/index.php?url=RecetteChoisie/insererComm" id ="form" >
-        <textarea type="textarea" rows="5" cols="50" id="commentInput" name="commentField" placeholder="Ajouter un avis..."></textarea>
+        <form method="get" action="../php/index.php?url=RecetteChoisie/insererComm" id ="form" >
+            <textarea type="textarea" id="commentInput" name="commentField" placeholder="Ajouter un avis..."></textarea>
             <input type="hidden" name="idRecette" value="<?php echo $recup ?>">
             <button type="submit" id="submitComment">Ajouter</button>
         </form>
@@ -82,8 +82,8 @@ $image = base64_encode($resultats['image']);
                 '</li>';
         }
         ?>
-        </div>
-    </ul>
+</div>
+</ul>
 </div>
 
 </body>
