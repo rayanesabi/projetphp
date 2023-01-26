@@ -1,3 +1,8 @@
+<?php
+$test = new Compte();
+$pseudo = $_SESSION['pseudo'];
+$test->getUser($pseudo);
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,8 +13,8 @@
 <div class="container">
     <h1>Mon compte</h1>
     <div class="user-info">
-        <p>Nom d'utilisateur : <?= $_SESSION['user']['pseudo'] ?></p>
-        <p>Adresse email : <?= $_SESSION['user']['email'] ?></p>
+        <p>Nom d'utilisateur : <?= $_SESSION['utilisateur']['pseudo'] ?></p>
+        <p>Adresse email : <?= $_SESSION['utilisateur']['email'] ?></p>
     </div>
     <div class="actions">
         <a href="update.php" class="btn">Modifier les informations</a>

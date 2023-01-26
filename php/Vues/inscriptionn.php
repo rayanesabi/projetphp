@@ -24,7 +24,7 @@
         <input type="password" name="mdpConfirme" placeholder="CONFIRMER LE MOT DE PASSE">
         <input type="text" name="pseudo" placeholder="PSEUDO">
         <p><h3>Ajouter une photo de profil</h3>(facultatif)</p>
-        <input type="file" name="pp" id="inputImage" accept="image/*">
+        <input type="file" name="photo" id="inputImage" accept="image/*">
         <img id="profile_preview" width="100" height="100" src="">
         <button class="boutonLog" type="submit">C'EST PARTI</button>
     </form>

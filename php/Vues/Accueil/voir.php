@@ -24,14 +24,14 @@
 </div>
 <h4>Recettes par Catégorie</h4>
 <div id="categories">
-    <button><img src="Vues/images/cheap.png">Bon marché</button>
-    <button><img src="Vues/images/rapide.png">Rapide</button>
-    <button><img src="Vues/images/chocolate.png">Au chocolat</button>
-    <button><img src="Vues/images/vegan.png">Vegan</button>
-    <button><img src="Vues/images/niveau.png">Facile</button>
+    <button><img  src="Vues/images/recipe.png" onclick=window.location.href="../php/index.php?url=Recette">Recettes </button>
+    <button><img id="pascher" src="Vues/images/cheap.png" onclick=window.location.href="../php/index.php?url=Recette/trierCoutBas">Bon marché</button>
+    <button><img id="rapide"src="Vues/images/rapide.png" onclick=window.location.href="../php/index.php?url=Recette/trierTpsBas">Rapide</button>
+    <button><img id="chocolat" src="Vues/images/chocolate.png" onclick=window.location.href="../php/index.php?url=Recette/trierIngredients" >Au chocolat</button>
+    <button><img id="particularite" src="Vues/images/vegan.png" onclick=window.location.href="../php/index.php?url=Recette/trierParticularite">Vegan</button>
+    <button><img id="simple" src="Vues/images/niveau.png"onclick=window.location.href="../php/index.php?url=Recette/trierDiffBas">Facile</button>
 </div>
 <p>
-    <?php print_r($A_vue['Recette']) ?>
 </p>
 <br>
 <br>

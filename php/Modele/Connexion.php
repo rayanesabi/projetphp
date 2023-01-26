@@ -8,7 +8,9 @@ private $pdo;
 
 
 
-    public function connexion($email, $mdp) {
+    public function connexion($email, $mdp)
+    {
+
         $stmt = $this->pdo->prepare('SELECT * FROM utilisateurs WHERE email = ?');
         $stmt->execute(array($email));
 
@@ -16,7 +18,9 @@ private $pdo;
 
         if ( $utilisateur &&password_verify($mdp, $utilisateur['mdp'])) {
             $_SESSION['utilisateur'] = $utilisateur;
-            header('Location:../php/index.php?url=Compte');
+            $_SESSION['email'] = $email;
+            $_SESSION['mdp'] = $mdp;
+            header('Location:../php/index.php?url=Compte/home');
             return true;
         } else {
             echo" Mauvais identifiants";
