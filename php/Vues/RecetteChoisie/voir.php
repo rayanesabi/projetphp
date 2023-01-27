@@ -21,24 +21,36 @@ $image = base64_encode($resultats['image']);
 <body>
 
 
-<div class="container">
-    <h4><?php print_r($resultats['nom']) ?></h4>
+    <div class="container">
+        <h4><?php print_r($resultats['nom']) ?></h4>
 
-    <div class="corps">
-        <div class="avis">
-            <div class="rating" >
-                <!----><a id="note5" href="#5" title="Donner 5 étoiles">☆</a>
-                <!----><a id="note4" href="#1" title="Donner 4 étoile">☆</a>
-                <!----><a id="note3" href="#4" title="Donner 3 étoiles">☆</a>
-                <!----><a id="note2" href="#3" title="Donner 2 étoiles">☆</a>
-                <!----><a id="note1" href="#2" title="Donner 1 étoiles">☆</a>
+
+        <div class="corps">
+            <div class="avis">
+                <div class="rating">
+                    <a id="note5" href="#5" title="Donner 5 étoiles">☆</a>
+                    <a id="note4" href="#4" title="Donner 4 étoiles">☆</a>
+                    <a id="note3" href="#3" title="Donner 3 étoiles">☆</a>
+                    <a id="note2" href="#2" title="Donner 2 étoiles">☆</a>
+                    <a id="note1" href="#1" title="Donner 1 étoile">☆</a>
+                </div>
+                <div class="cmb_personnes">
+                    6 personnes
+                </div>
             </div>
-            <div class="cmb_personnes">
-                6 personnes
+            <div class="box_image">
+                <?php
+
+                    echo '<ul>
+                        
+                        <div class="image-recette">
+                            <img src="data:image/png;base64,' . $image . '"class="image-recette-choisie" alt= ' . $resultats['nom'] . '>
+                        </div>';
+
+                    echo '</ul>';
+                ?>
+
             </div>
-        </div>
-        <div class="box_image">
-            <img src="data:image/png;base64,'<?php echo $image?>'id="image">
         </div>
         <div class="temps_total_preparation">
             <p>temps cuisson : <br><?php print_r($resultats['tpscuiss']) ?> min</p>
@@ -48,7 +60,11 @@ $image = base64_encode($resultats['image']);
         </div>
     </div>
     <div class="corps_étape">
-        <h1>Liste étapes : <?php print_r($resultats['etapes']) ?></h1>
+
+        <h2>Liste étapes:</h2><br>
+        <p><?php print_r($resultats['etapes']) ?>
+        <p>
+
     </div>
     <!---divison commentaire--->
     <div id="Commentaires">
@@ -58,7 +74,7 @@ $image = base64_encode($resultats['image']);
     </div>
     <!--espace Commentaires-->
     <div id="CommentairesBox">
-        <form method="post" action="../php/index.php?url=RecetteChoisie/insererComm" id ="form" >
+        <form method="post" action="../php/index.php?url=RecetteChoisie/insererComm" id="form">
             <textarea type="textarea" id="commentInput" name="commentField" placeholder="Ajouter un avis..."></textarea>
             <input type="hidden" name="idRecette" value="<?php echo $recup ?>">
             <button type="submit" id="submitComment">Ajouter</button>
@@ -82,12 +98,13 @@ $image = base64_encode($resultats['image']);
                 '</li>';
         }
         ?>
-</div>
-</ul>
-</div>
+        </div>
+    </ul>
+    </div>
 
 </body>
+
 </html>
 <style>
-    @import url("/php/css/style.css");
+@import url("/php/css/style.css");
 </style>

@@ -35,8 +35,9 @@ final class Recette {
     {
         // Connexion à la base de données
         // Préparation de la requête
-        $stmt = $this->pdo->prepare("SELECT * FROM recette WHERE ingredients = :ingredients");
-        $stmt->bindParam(':ingredients', $categorie);
+        $ingredients = implode(',', $categorie);
+        $stmt = $this->pdo->prepare("SELECT * FROM recette WHERE ingredients = :ingredient");
+        $stmt->bindParam(':ingredient', $ingredients);
 
         // Exécution de la requête
         $stmt->execute();
@@ -51,8 +52,9 @@ final class Recette {
     {
         // Connexion à la base de données
         // Préparation de la requête
+        $ingredients = implode(',', $categorie);
         $stmt = $this->pdo->prepare("SELECT * FROM recette WHERE particularite = :particularite");
-        $stmt->bindParam(':particularite', $categorie);
+        $stmt->bindParam(':particularite', $ingredients);
 
         // Exécution de la requête
         $stmt->execute();

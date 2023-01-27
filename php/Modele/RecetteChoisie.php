@@ -37,7 +37,9 @@ final class RecetteChoisie {
         return $commentaires;
     }
 
-    public function ajouterCommentaires( $libelle, $note)
+
+    public function ajouterCommentaires($id_utilisateur, $libelle, $id_recette)
+
     {
         if ($_SESSION['connecte']) {
             $email = $_SESSION['email'];

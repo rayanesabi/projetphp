@@ -1,6 +1,7 @@
 <?php
 $recettes = $A_vue['aleatoire'];
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -12,42 +13,72 @@ $recettes = $A_vue['aleatoire'];
     <link href="/php/Vues/images/caramel.ico" rel="icon">
 
 </head>
+
 <body>
 
-<div id="banniere">
-    <img src="Vues/images/cheescake.jpg">
-    <div class="p">«Tout le monde peut pâtisser»</div>
-</div>
-<div id="Recettes">
-    <ul>
+
+    <div id="banniere">
+        <img src="Vues/images/cheescake.jpg" class="main-image">
+        <div class="p">«Tout le monde peut pâtisser»</div>
+    </div>
+
+    <div id="ligneAccueil">
+            </div>
+
+
+    <div id="Recettes">
         <?php
+        echo '<ul>';
+            
         for ($x=0; $x<3; ++$x)
         {
+        $image = base64_encode($recettes[$x]['image']);
         echo'
-        <li><a id="recette1" href="../php/index.php?id_recette='.$recettes[$x]['id_recette'].'&url=RecetteChoisie">' .$recettes[$x]['nom'] . '</a></li>';
+            <li>
+                <a href="../php/index.php?id_recette='.$recettes[$x]['id_recette'].'&url=RecetteChoisie">
+                    <img src="data:image/png;base64,' . $image . '" alt= "' . $recettes[$x]['nom'] . '">
+                </a>
+
+                <div class =nom-recettes>
+                    <a>'.$recettes[$x]['nom'].'</a>
+                </div>
+            </li>';
+            
+            
         }
+        
+        echo '</ul>';
         ?>
-    </ul>
-</div>
-<h4>Recettes par Catégorie</h4>
-<div id="categories">
-    <button><img  src="Vues/images/recipe.png" onclick=window.location.href="../php/index.php?url=Recette">Recettes </button>
-    <button><img id="pascher" src="Vues/images/cheap.png" onclick=window.location.href="../php/index.php?url=Recette/trierCoutBas">Bon marché</button>
-    <button><img id="rapide"src="Vues/images/rapide.png" onclick=window.location.href="../php/index.php?url=Recette/trierTpsBas">Rapide</button>
-    <button><img id="chocolat" src="Vues/images/chocolate.png" onclick=window.location.href="../php/index.php?url=Recette/trierIngredients" >Au chocolat</button>
-    <button><img id="particularite" src="Vues/images/vegan.png" onclick=window.location.href="../php/index.php?url=Recette/trierParticularite">Vegan</button>
-    <button><img id="simple" src="Vues/images/niveau.png"onclick=window.location.href="../php/index.php?url=Recette/trierDiffBas">Facile</button>
-</div>
-<p>
-</p>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+        
+    </div>
+    <h4>Recettes par Catégorie</h4>
+    <div id="categories">
+        <button><img src="Vues/images/recipe.png" onclick="window.location.href='../php/index.php?url=Recette'">Recettes
+        </button>
+        <button><img id="pascher" src="Vues/images/cheap.png"
+                onclick="window.location.href='../php/index.php?url=Recette/trierCoutBas'">Bon marché</button>
+        <button><img id="rapide" src="Vues/images/rapide.png"
+                onclick="window.location.href='../php/index.php?url=Recette/trierTpsBas'">Rapide</button>
+        <button><img id="chocolat" src="Vues/images/chocolate.png"
+                onclick="window.location.href='../php/index.php?url=Recette/trierIngredients/chocolat'">Au
+            chocolat</button>
+        <button><img id="particularite" src="Vues/images/vegan.png"
+                onclick="window.location.href='../php/index.php?url=Recette/trierParticularite/végan'">Vegan</button>
+        <button><img id="simple" src="Vues/images/niveau.png"
+                onclick="window.location.href='../php/index.php?url=Recette/trierDiffBas'">Facile</button>
+    </div>
+    <p>
+    </p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
 </body>
+
 </html>
 <style>
-    @import url("/php/css/style.css");
+@import url("/php/css/style.css");
 </style>
