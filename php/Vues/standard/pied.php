@@ -12,7 +12,7 @@
 
 <body>
 <div id="footer">
-    <li><a>Copyright © 2022 Caramelange Inc. Tous droits réservés</a></li>
+    <li><a>Copyright © 2022 AMU. Tous droits réservés</a></li>
 </div>
 </body>
 
