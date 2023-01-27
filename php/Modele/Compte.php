@@ -1,37 +1,60 @@
 <?php
 class Compte {
-    public function home() {
-        // Vérifie si l'utilisateur est connecté
-        if (isset($_SESSION['pseudo'])) {
-            // Récupère les données de l'utilisateur connecté
-            $user = $_SESSION['pseudo'];
-            // Charge la vue pour l'utilisateur connecté
-            require_once 'Vues/Compte/voir.php';
+    private $pdo;
+    public function __construct() {
+        $this->pdo = Connection::getInstance()->pdo;
+    }
+
+
+    public function connexion($email, $mdp) {
+        $stmt = $this->pdo->prepare('SELECT * FROM utilisateurs WHERE email = ?');
+        $stmt->execute(array($email));
+        $utilisateur = $stmt ->fetch();
+        if ( $utilisateur &&password_verify($mdp, $utilisateur['mdp'])) {
+            $_SESSION['connecte']= true;
+            $_SESSION['utilisateur'] = $utilisateur;
+            $_SESSION['email']= $utilisateur['email'];
+            $_SESSION['id_utilisateur'] = $utilisateur['id_utilisateur'];
+            $_SESSION['photo']= $utilisateur['photo'];
+
+            $insert = $this->pdo->prepare('Update utilisateurs set date_derlogin = ? Where id_utilisateur = ? ');
+            $insert->execute(array(date('y-m-d'), $_SESSION['id_utilisateur']));
+            return true;
         } else {
-            // Redirige l'utilisateur vers la page de connexion
-            header('Location: ../php/Vues/Compte/voir.php');
+            return false;
         }
     }
-
-
-
-    public function getUser($pseudo) {
-        // Connexion à la base de données
-        $pdo = Connection::getInstance()->pdo;
-
-        // Récupération des informations de l'utilisateur avec la base de données
-        $stmt = $pdo->prepare("SELECT * FROM utilisateurs WHERE pseudo = ?");
-        $stmt->bind_param("s", $pseudo);
-        $stmt->execute();
-        $result = $stmt->get_result();
-
-        // Retourne un tableau avec les informations de l'utilisateur
-        return $result->fetch_assoc();
+    public function connexionAdmin($email) {
+        $stmt = $this->pdo->prepare('SELECT id_admin FROM utilisateurs WHERE email = ?');
+        $stmt->execute(array($email));
+        $admin= $stmt->fetch();
+        if ($admin['id_admin'] == 1 ) {
+            $_SESSION['admin'] = true;
+            return true;
+        } else {
+            return false;
+        }
     }
-    public function modifier($pseudo, $email,$mdp) {
+    public function decoAdmin() {
+            $_SESSION['admin'] = false;
+
+    }
+
+    public function modifier($pseudo, $email, $mdp, $photo) {
         $mdphash = password_hash($mdp, PASSWORD_DEFAULT);
-        $stmt= $this->pdo->prepare('UPDATE utilisateurs SET pseudo = ?, email = ?,mdp = ? WHERE id_utilisateur = ?');
-        $stmt->execute(array($pseudo, $mdphash, $email,$_SESSION['user']['id'] ));
+        $id_utilisateur = $_SESSION['utilisateur']['id_utilisateur'];
+        $stmt= $this->pdo->prepare('UPDATE utilisateurs SET pseudo = ?, email = ?,mdp = ?, photo = ? WHERE id_utilisateur = ?');
+        $stmt->execute(array($pseudo, $email, $mdphash,$photo, $id_utilisateur ));
+        $query = $this->pdo->prepare('SELECT * FROM utilisateurs WHERE email = ?');
+        $query->execute(array($email));
+        $utilisateur = $query ->fetch();
+        $_SESSION['utilisateur'] = $utilisateur;
+        $_SESSION['email']= $utilisateur['email'];
+        $_SESSION['id_utilisateur'] = $utilisateur['id_utilisateur'];
+        $_SESSION['photo'] = $utilisateur['photo'];
+
+        return $stmt->fetch();
+        // Retourne un tableau avec les informations de l'utilisateur
     }
 
 

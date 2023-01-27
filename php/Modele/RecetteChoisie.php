@@ -41,7 +41,7 @@ final class RecetteChoisie {
     public function ajouterCommentaires($id_utilisateur, $libelle, $id_recette)
 
     {
-        if (isset($_SESSION['email'])) {
+        if ($_SESSION['connecte']) {
             $email = $_SESSION['email'];
             $stmt = $this->pdo->prepare('Select id_utilisateur from utilisateurs where email = :email');
             $stmt->execute(array($email));
@@ -57,4 +57,8 @@ final class RecetteChoisie {
         </section>";
         }
     }
+    public function ajouterNote($note){
+
+    }
+
 }

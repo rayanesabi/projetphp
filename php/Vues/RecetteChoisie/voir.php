@@ -60,9 +60,11 @@ $image = base64_encode($resultats['image']);
         </div>
     </div>
     <div class="corps_étape">
+
         <h2>Liste étapes:</h2><br>
         <p><?php print_r($resultats['etapes']) ?>
         <p>
+
     </div>
     <!---divison commentaire--->
     <div id="Commentaires">

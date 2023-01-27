@@ -14,16 +14,14 @@ class Inscription
             && $mdp === $mdpConfirme;
     }
 
-    public function inscription($email, $mdp, $pseudo, $pp )
+    public function inscription($email, $mdp, $pseudo, $photo )
     {
 // Hachage du mot de passe
         $mdphash = password_hash($mdp, PASSWORD_DEFAULT);
         $date = date('y-m-d');
         // Insertion des données dans la base de données
-        $insert = $this->pdo->prepare('INSERT INTO utilisateurs(pseudo, mdp, email, date_prlogin, pp) VALUES(?, ?, ?, ?, ?)');
-        $insert->execute(array($pseudo, $mdphash, $email, $date, $pp));
-        header('Location:../php/index.php?url=Compte');
-        die();
+        $insert = $this->pdo->prepare('INSERT INTO utilisateurs(pseudo, mdp, email, date_prlogin, photo) VALUES(?, ?, ?, ?, ?)');
+        $insert->execute(array($pseudo, $mdphash, $email, $date, $photo));
         // Redirection vers la page d'accueil
     }
 

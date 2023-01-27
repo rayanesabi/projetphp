@@ -59,6 +59,8 @@ body{ /*style de la page entière*/
 #banniere img{
     width: 711px;
     height: 473px;
+    border-radius: 40px;
+
 }
 
 .p{
@@ -76,6 +78,7 @@ body{ /*style de la page entière*/
     border-radius: 10px;
     width: 25%;
 }
+
 
 .main-image {
     border-radius: 10px;
@@ -158,11 +161,11 @@ body{ /*style de la page entière*/
     box-shadow:rgb(0 0 0 / 10%) 0px 0px 10px;
     cursor: pointer;
     position: relative;
-    
+
 }
 
 #categories button:hover{ /*quand on passe la souris dessus*/
-   background-color: whitesmoke;
+    background-color: whitesmoke;
 }
 
 #categories img{
@@ -203,7 +206,7 @@ h4{
 
 
 .box_image {
-    text-align: center;    
+    text-align: center;
 }
 
 .cmb_personnes {
@@ -288,7 +291,7 @@ h4{
     font-size: 1vw;
 }
 
- #submitComment{
+#submitComment{
     text-align: center;
     text-decoration: none;
     font-size: 1vw;
@@ -318,6 +321,7 @@ h4{
     width: 60px;
     height: 60px;
 }
+
 .commentArea{
     background-color: #c85103;
     display: flex;
