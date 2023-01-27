@@ -1,4 +1,5 @@
 <?php
+require_once 'C:\xampp\htdocs\projetphp\php\Modele\RecetteChoisie.php';
 $test = new RecetteChoisie();
 $recup = $_GET['id_recette'];
 $ty = $test->afficherCommentaires($recup);
@@ -26,12 +27,12 @@ $image = base64_encode($resultats['image']);
 
     <div class="corps">
         <div class="avis">
-            <div class="rating">
-                <!----><a href="#5" title="Donner 5 étoiles">☆</a>
-                <!----><a href="#4" title="Donner 4 étoiles">☆</a>
-                <!----><a href="#3" title="Donner 3 étoiles">☆</a>
-                <!----><a href="#2" title="Donner 2 étoiles">☆</a>
-                <!----><a href="#1" title="Donner 1 étoile">☆</a>
+            <div class="rating" >
+                <!----><a id="note5" href="#5" title="Donner 5 étoiles">☆</a>
+                <!----><a id="note4" href="#1" title="Donner 4 étoile">☆</a>
+                <!----><a id="note3" href="#4" title="Donner 3 étoiles">☆</a>
+                <!----><a id="note2" href="#3" title="Donner 2 étoiles">☆</a>
+                <!----><a id="note1" href="#2" title="Donner 1 étoiles">☆</a>
             </div>
             <div class="cmb_personnes">
                 6 personnes
@@ -48,7 +49,7 @@ $image = base64_encode($resultats['image']);
         </div>
     </div>
     <div class="corps_étape">
-        <h1>Liste ingrédients : <?php print_r($resultats['ingredients']) ?></h1>
+        <h2>Liste étapes:</h2><br> <p><?php print_r($resultats['etapes']) ?><p>
     </div>
     <!---divison commentaire--->
     <div id="Commentaires">
