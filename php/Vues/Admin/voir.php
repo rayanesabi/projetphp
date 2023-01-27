@@ -45,13 +45,14 @@ $numbers_of_rows = count($recette);
                 ?></p>
         </form>
     </div>
-    <div class="imageUser"><img src="../php/Vues/images/user.png"></div>
+    <div class="imageUser"></div>
 </div>
 <br />
-
+<div id="ligneAccueil">
+</div>
 <div class="comment">
 
-    <div class="imageComment"><img src="../php/Vues/images/avis.png"></div>
+    <div class="imageComment"></div>
     <div class="formComment">
         <h1>Supprimer un commentaire</h1>
         <form action="../php/index.php?url=Admin/supprComm" method="post">
@@ -72,10 +73,11 @@ $numbers_of_rows = count($recette);
         </form>
     </div>
 
-
+    <div id="ligneAccueil">
+    </div>
     <div class="recette">
 
-        <div class="imageRecette"><img src="../php/Vues/images/recipe.png"></div>
+        <div class="imageRecette"></div>
         <div class="fromRecette">
             <h1>Supprimer une recette</h1>
             <form action="../php/index.php?url=Admin/supprRecette" method="post">

@@ -1,6 +1,7 @@
 <?php
 $test = new RecetteChoisie();
 $recup = $_GET['id_recette'];
+$_SESSION['id_recette'] = $recup;
 $ty = $test->afficherCommentaires($recup);
 $number_of_rows = count($ty);
 $resultats = $A_vue['RecetteChoisie'];
@@ -75,7 +76,8 @@ $image = base64_encode($resultats['image']);
     <!--espace Commentaires-->
     <div id="CommentairesBox">
         <form method="post" action="../php/index.php?url=RecetteChoisie/insererComm" id="form">
-            <textarea type="textarea" id="commentInput" name="commentField" placeholder="Ajouter un avis..."></textarea>
+            <label for="commentInput"></label><textarea id="commentInput" name="commentInput" placeholder="Ajouter un avis..."></textarea>
+            <textarea type="textarea" id="noteInput" name="noteInput" placeholder="Note / 5"></textarea>
             <input type="hidden" name="idRecette" value="<?php echo $recup ?>">
             <button type="submit" id="submitComment">Ajouter</button>
         </form>

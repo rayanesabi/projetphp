@@ -1,4 +1,5 @@
 <?php
+session_start();
 final class ControleurAdmin
 
 {
@@ -39,14 +40,20 @@ final class ControleurAdmin
         $tpstotal = $_POST['tpstotal'];
         $etapes = $_POST['etapes'];
         $photo = file_get_contents($_FILES['photo']['tmp_name']);
-        if ($O_Admin->AjtRct($nom, $ingredient, $difficulte, $cout, $tpsprep, $tpscuisson, $tpsrepos, $tpstotal, $etapes, $photo)) {
+        $particularite = $_POST['particularite'];
+        $id_recette = $_POST['id_recette'];
+
+        if ($O_Admin->AjtRct($nom, $ingredient, $difficulte, $cout, $tpsprep, $tpscuisson, $tpsrepos, $tpstotal, $id_recette, $etapes, $photo, $particularite)) {
             Vue::montrer('Recette/voir');
         }
     }
 
-        public function supprRctAction(){
-
-
+    public function supprRecetteAction(){
+        $O_Admin = new Admin();
+        $id_recette = $_POST['id_recette'];
+        if ($O_Admin->supprimerRecette($id_recette)) {
+            Vue::montrer('Admin/voir');
+        }
     }
     public function decoAdminAction(){
         $O_Admin = new Admin();

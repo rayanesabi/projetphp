@@ -55,7 +55,7 @@ $number_of_rows = count($resultats);
 
         <form class="barre-filtres">
             <label for="filtre">Filtrer par :</label>
-            <select id="filtre" name="filtre" onchange="changeFonction()">
+            <select id="filtre" name="filtre"">
                 <option value="">Choisir un filtre</option>
                 <option value="trierDiffHaut">Difficulté décroissante</option>
                 <option value="trierDiffBas">Difficulté croissante</option>
@@ -100,7 +100,7 @@ $number_of_rows = count($resultats);
         function validerFiltre() {
             var select = document.getElementById("filtre");
             var optionSelectionnee = select.options[select.selectedIndex].value;
-            window.location.href = "/php/index.php?url=Recette/" + optionSelectionnee;
+            window.location.href = "../php/index.php?url=Recette/" + optionSelectionnee;
         }
         </script>
 

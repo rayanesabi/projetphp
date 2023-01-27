@@ -1,3 +1,8 @@
+<?php
+$test = new Recette();
+$resultats = $test->afficheRecettes();
+$nombre = count($resultats) + 1;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,10 +26,12 @@
         <input type="number" name="tpsrepos" placeholder="Temps de repos" min="0" max="100" required>
         <input type="number" name="tpstotal" placeholder="Temps total" min="0" max="260" required>
         <input type="textarea" nom="etapes" placeholder="Etapes de préparation" onkeypress="this.style.width = Math.max(this.value.length, 20) + 'ch';" required>
+        <input type="text" name="particularite" placeholder="Particularité" required>
+        <input  type="hidden" name="id_recette" placeholder="Particularité" value="'<?php $nombre ?>'">
         <p><h3>Photo de la recette</h3></p>
         <input type="file" name="photo" id="inputImage" accept="image/*" required>
         <img id="profile_preview" width="300" height="300" src="">
-        <button class="boutonLog" type="submit" onclick="alert('Votre recette a bien été ajouté')" value="Ajouter">Ajouter</button>
+        <button class="boutonLog" type="submit" onclick="alert('Votre recette a bien été ajoutée')" value="Ajouter">Ajouter</button>
         <input type="reset" class="boutonReset">
     </form>
 

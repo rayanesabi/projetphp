@@ -1,5 +1,6 @@
 
 <?php
+session_start();
 final class ControleurRecetteChoisie
 {
 
@@ -12,14 +13,13 @@ final class ControleurRecetteChoisie
     }
     public function insererCommAction(){
         $O_recetteChoisie =  new RecetteChoisie();
-        $id_recette = $_GET['id'];
-        $_SESSION['id'] = $id_recette;
-        $comment = $_POST['commentField']; // Récupération du commentaire à partir des paramètres
-        Vue::montrer('RecetteChoisie/voir', array('Commentaires' =>  $O_recetteChoisie->ajouterCommentaires($comment, $id_recette)));
+        $O_recette = new Recette();
+        $id_recette = $_SESSION['id_recette'];
+        $id_utilisateur = $_SESSION['utilisateur']['id_utilisateur'];
+        $comment = $_POST['commentInput'];
+        $note = $_POST['noteInput'];// Récupération du commentaire à partir des paramètres
+        $O_recetteChoisie->ajouterCommentaires($id_utilisateur, $comment, $note, $id_recette);
+        Vue::montrer('Recette/voir', array('recette' =>  $O_recette->afficheRecettes()));
     }
-    public function insererNote(){
-        $O_recetteChoisie =  new RecetteChoisie();
-        $note = $_GET['note'];
-        Vue::montrer('RecetteChoisie/voir', array('Note' =>  $O_recetteChoisie->ajouterNote($note)));
-    }
+
 }
