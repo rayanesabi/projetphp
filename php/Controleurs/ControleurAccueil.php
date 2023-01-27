@@ -22,7 +22,7 @@ final class ControleurAccueil
         // Charge la vue pour la page d'accueil
 
         $O_Accueil = new Accueil();
-        ;        Vue::montrer('Accueil/voir');
+        Vue::montrer('Accueil/voir', array('aleatoire'=> $O_Accueil->affiche3Recettes()));
     }
 
     public function loginAction() {

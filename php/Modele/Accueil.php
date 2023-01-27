@@ -22,5 +22,12 @@ class Accueil
         return $attributs;
     }
 
+    public function affiche3Recettes() {
+        $resultd = $this->pdo->prepare("SELECT * FROM recette order by rand() limit 3");
+        $resultd->execute();
+        $test = $resultd->fetchAll();
+        return $test;
+    }
+
 
 }

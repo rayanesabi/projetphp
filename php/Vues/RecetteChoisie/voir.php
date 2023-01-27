@@ -30,11 +30,11 @@ $image = base64_encode($resultats['image']);
         <div class="corps">
             <div class="avis">
                 <div class="rating">
-                    <!----><a href="#5" title="Donner 5 étoiles">☆</a>
-                    <!----><a href="#4" title="Donner 4 étoiles">☆</a>
-                    <!----><a href="#3" title="Donner 3 étoiles">☆</a>
-                    <!----><a href="#2" title="Donner 2 étoiles">☆</a>
-                    <!----><a href="#1" title="Donner 1 étoile">☆</a>
+                    <a id="note5" href="#5" title="Donner 5 étoiles">☆</a>
+                    <a id="note4" href="#4" title="Donner 4 étoiles">☆</a>
+                    <a id="note3" href="#3" title="Donner 3 étoiles">☆</a>
+                    <a id="note2" href="#2" title="Donner 2 étoiles">☆</a>
+                    <a id="note1" href="#1" title="Donner 1 étoile">☆</a>
                 </div>
                 <div class="cmb_personnes">
                     6 personnes

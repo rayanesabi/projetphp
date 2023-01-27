@@ -37,7 +37,7 @@ final class RecetteChoisie {
         return $commentaires;
     }
 
-    function ajouterCommentaires($id_utilisateur, $libelle, $id_recette)
+    public function ajouterCommentaires($id_utilisateur, $libelle, $id_recette)
     {
         //vérifie si le user est connecté
         if (isset($_SESSION['email'])) {
@@ -50,5 +50,4 @@ final class RecetteChoisie {
         </section>";
         }
     }
-
 }
