@@ -1,3 +1,6 @@
+<?php
+$recettes = $A_vue['aleatoire'];
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -17,9 +20,13 @@
 </div>
 <div id="Recettes">
     <ul>
-        <li><a id="recette1">tarte</a></li>
-        <li><a id="recette2">eclair</a></li>
-        <li><a id="recette3">choux</a></li>
+        <?php
+        for ($x=0; $x<3; ++$x)
+        {
+        echo'
+        <li><a id="recette1" href="../php/index.php?id_recette='.$recettes[$x]['id_recette'].'&url=RecetteChoisie">' .$recettes[$x]['nom'] . '</a></li>';
+        }
+        ?>
     </ul>
 </div>
 <h4>Recettes par Catégorie</h4>

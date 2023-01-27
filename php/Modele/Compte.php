@@ -34,12 +34,6 @@ class Compte {
         $stmt->execute(array($pseudo, $mdphash, $email,$_SESSION['user']['id'] ));
     }
 
-    public function test($id_utilisateur, $libelle, $note) {
-        $date = date('y-m-d');
-        $insert = $this->pdo->prepare('INSERT INTO commentaires(id_utilisateur, libelle, note, date) VALUES(?, ?, ?, ?)');
-        $insert->execute(array($id_utilisateur, $libelle, $note, $date));
-        header('Location:../php/index.php?url=Recette.php');
-        die();
-    }
+
 
 }
