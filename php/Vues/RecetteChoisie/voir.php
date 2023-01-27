@@ -58,7 +58,7 @@ $image = base64_encode($resultats['image']);
     </div>
     <!--espace Commentaires-->
     <div id="CommentairesBox">
-        <form method="get" action="../php/index.php?url=RecetteChoisie/insererComm" id ="form" >
+        <form method="post" action="../php/index.php?url=RecetteChoisie/insererComm" id ="form" >
             <textarea type="textarea" id="commentInput" name="commentField" placeholder="Ajouter un avis..."></textarea>
             <input type="hidden" name="idRecette" value="<?php echo $recup ?>">
             <button type="submit" id="submitComment">Ajouter</button>

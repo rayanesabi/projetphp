@@ -1,3 +1,12 @@
+<?php
+if (isset($A_vue['erreur'])) {
+    $erreur = $A_vue['erreur'];
+} else{
+    $erreur = "test";
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -14,10 +23,11 @@
     <div id="Onglet">
             <a id="connexion"><h3>SE CONNECTER</a>   <a id="inscription" href="../php/index.php?url=Inscription">S'INSCRIRE</a></h3>
         </div>
-        <input type="email" name="email" placeholder="E-MAIL">
-        <input type="password" name="mdp" placeholder="MOT DE PASSE">
+        <input type="email" name="email" id="email" placeholder="E-MAIL" required>
+        <input type="password" name="mdp" id="mdp" placeholder="MOT DE PASSE" required>
         <button class="boutonLog" type="submit">LET'S COOK</button>
     </form>
+    <?php echo $erreur?>
 </div>
 
 </body>
