@@ -11,11 +11,11 @@ class Admin
         $_SESSION['connecte'] = true;
 
     }
-    function AjtRct($nom, $ingredients, $difficulté, $cout, $tpsprepar, $tpscuiss, $tpsrepos, $tpstotal, $etapes, $image)
+    function AjtRct($nom, $ingredients, $difficulté, $cout, $tpsprepar, $tpscuiss, $tpsrepos, $tpstotal, $id_recette, $etapes, $image, $particularite)
     {
-        $insert = $this->pdo->prepare('INSERT INTO recette(nom, ingredients, difficulté, cout, tpsprepar, tpscuiss, tpsrepos,
- tpstotal, etapes, image) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)');
-        $insert->execute(array($nom, $ingredients, $difficulté, $cout, $tpsprepar, $tpscuiss, $tpsrepos, $tpstotal, $etapes, $image));
+        $insert = $this->pdo->prepare('INSERT INTO recette(nom, ingredients, difficulté, cout, tpsprepar, tpscuiss, tpsrepos, 
+ tpstotal, id_recette, etapes, image,particularite) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)');
+        $insert->execute(array($nom, $ingredients, $difficulté, $cout, $tpsprepar, $tpscuiss, $tpsrepos, $tpstotal, $id_recette, $etapes, $image, $particularite));
         return $insert;
     }
     public function afficheMembre(){
@@ -39,6 +39,12 @@ class Admin
     public function supprimerCommentaires($id_comm){
         $stmt = $this->pdo->prepare('DELETE FROM commentaires WHERE id_comm = ?');
         $stmt->execute(array($id_comm));
+        return $stmt;
+
+    }
+    public function supprimerRecette($id_recette){
+        $stmt = $this->pdo->prepare('DELETE FROM recette WHERE id_recette = ?');
+        $stmt->execute(array($id_recette));
         return $stmt;
 
     }

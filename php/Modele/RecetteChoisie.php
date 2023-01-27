@@ -38,23 +38,18 @@ final class RecetteChoisie {
     }
 
 
-    public function ajouterCommentaires($id_utilisateur, $libelle, $id_recette)
-
+    public function ajouterCommentaires($id_utilisateur, $libelle, $note, $id_recette)
     {
         if ($_SESSION['connecte']) {
-            $email = $_SESSION['email'];
-            $stmt = $this->pdo->prepare('Select id_utilisateur from utilisateurs where email = :email');
-            $stmt->execute(array($email));
-            $id_utilisateur = $stmt->fetch();
             $date = date('y-m-d');
             $insert = $this->pdo->prepare('INSERT INTO commentaires(id_utilisateur, libelle, note, date) VALUES(?, ?, ?, ?)');
             $insert->execute(array($id_utilisateur, $libelle, $note, $date));
-            header("/php/index.php?url=RecetteChoisie");
-            die();
+            return $insert;
         } else {
             echo "<section class='mustBeConnected'>
         Vous devez etre connecté pour poster un commentaire 
         </section>";
+            return;
         }
     }
     public function ajouterNote($note){

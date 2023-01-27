@@ -49,6 +49,7 @@ $numbers_of_rows = count($recette);
 </div>
 <br />
 <div id="ligneAccueil">
+
             </div>
 <div class="comment">
 
@@ -74,6 +75,7 @@ $numbers_of_rows = count($recette);
     </div>
 
     <div id="ligneAccueil">
+
             </div>
     <div class="recette">
 
