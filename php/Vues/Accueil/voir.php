@@ -40,14 +40,14 @@ $recettes = $A_vue['aleatoire'];
                 </a>
 
                 <div class =nom-recettes>
-                <a>'.$recettes[$x]['nom'].'</a>
-            </div>
+                    <a>'.$recettes[$x]['nom'].'</a>
+                </div>
             </li>';
             
             
         }
         
-        echo '</ul>'
+        echo '</ul>';
         ?>
         
     </div>

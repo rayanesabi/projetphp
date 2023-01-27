@@ -108,6 +108,29 @@ body{ /*style de la page entière*/
     box-shadow: 2px 2px 5px #888888;
 }
 
+.box-image ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.image-recette{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.image-recette-choisie{
+    display: block;
+    object-fit: cover;
+    width: 35rem;
+    height: 25rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #888888;
+}
+
 .nom-recettes {
     text-align: center;
     font-size: 1.2rem;
@@ -214,6 +237,8 @@ h4{
 .corps_étape {
     background-color: white;
     display: flex;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 #Commentaires{
