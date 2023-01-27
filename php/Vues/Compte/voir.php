@@ -1,3 +1,13 @@
+<?php
+if (isset($A_vue['reussite'])){
+    $condition = $A_vue['reussite'];
+} elseif (isset($A_vue['erreur'])){
+    $condition = $A_vue['erreur'];
+} else{
+    $condition ="";
+}
+$image = base64_encode($_SESSION['photo']);
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,19 +16,28 @@
 </head>
 <body>
 <div class="container">
+    <p><?php echo $condition ?></p>
     <h1>Mon compte</h1>
     <div class="user-info">
-        <p>Nom d'utilisateur : <?= $_SESSION['user']['pseudo'] ?></p>
-        <p>Adresse email : <?= $_SESSION['user']['email'] ?></p>
+        <?php echo '<img src="data:image/png;base64,' . $image . '"class="card-img-top" >' ?>
+        <p>Nom d'utilisateur : <?= $_SESSION['utilisateur']['pseudo'] ?></p>
+        <p>Adresse email : <?= $_SESSION['utilisateur']['email'] ?></p>
     </div>
     <div class="actions">
-        <a href="update.php" class="btn">Modifier les informations</a>
-        <a href="delete.php" class="btn">Supprimer le compte</a>
+        <a href="../php/index.php?url=Compte/modifierDefaut" class="btn">Modifier les informations</a>
+        <?php if($_SESSION['admin']){
+            echo '<a href="../php/index.php?url=Admin/ajt" class="btn">Ajouter une recette</a>';
+        }?>
+        <a href="../php/index.php?url=Compte/deconnexion" class="btn">Déconnexion</a>
+        <a href="../php/index.php?url=Compte/connexionAdmin" class="btn">Admin</a>
+
     </div>
 </div>
 </body>
 </html>
 <style>
+    @import url("/php/css/style.css");
+
     .container {
         width: 50%;
         margin: 0 auto;

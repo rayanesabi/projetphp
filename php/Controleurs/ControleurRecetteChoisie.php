@@ -16,6 +16,10 @@ final class ControleurRecetteChoisie
         $_SESSION['id'] = $id_recette;
         $comment = $_POST['commentField']; // Récupération du commentaire à partir des paramètres
         Vue::montrer('RecetteChoisie/voir', array('Commentaires' =>  $O_recetteChoisie->ajouterCommentaires($comment, $id_recette)));
-
+    }
+    public function insererNote(){
+        $O_recetteChoisie =  new RecetteChoisie();
+        $note = $_GET['note'];
+        Vue::montrer('RecetteChoisie/voir', array('Note' =>  $O_recetteChoisie->ajouterNote($note)));
     }
 }

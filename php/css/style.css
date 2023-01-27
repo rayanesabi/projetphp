@@ -17,6 +17,8 @@ body{ /*style de la page entière*/
 #banniere img{
     width: 711px;
     height: 473px;
+    border-radius: 40px;
+
 }
 
 .p{
@@ -32,6 +34,7 @@ body{ /*style de la page entière*/
 #Recettes{ /*ensemble des 3 recettes*/
     text-align: center;
     margin: 70px;
+    border-radius: 40px;
 }
 
 #Recettes li{ /*recette une par une*/
@@ -62,11 +65,11 @@ body{ /*style de la page entière*/
     box-shadow:rgb(0 0 0 / 10%) 0px 0px 10px;
     cursor: pointer;
     position: relative;
-    
+
 }
 
 #categories button:hover{ /*quand on passe la souris dessus*/
-   background-color: whitesmoke;
+    background-color: whitesmoke;
 }
 
 #categories img{
@@ -107,7 +110,7 @@ h4{
 
 
 .box_image {
-    text-align: center;    
+    text-align: center;
 }
 
 .cmb_personnes {
@@ -179,7 +182,7 @@ h4{
     font-size: 1vw;
 }
 
- #submitComment{
+#submitComment{
     text-align: center;
     text-decoration: none;
     font-size: 1vw;
@@ -209,46 +212,100 @@ h4{
     width: 60px;
     height: 60px;
 }
-.commentArea{
-    background-color: #c85103;
-    display: flex;
-    flex-direction: row;
-    padding: 5px;
-    margin-bottom: 5vh;
-    margin-right: 3vw;
-    background: #c5beb9;
-    text-decoration: none;
-}
 
-.profile{
-    margin-right: 40px;
-    padding-right: 10px;
-    border-right: 2px solid;
-    border-color: gray;
-}
-.profileName{
-    margin-top: 0;
-    text-align: center;
-}
+@media only screen and (max-width: 600px) {
+    @import url("navbar.css");
+    @import url("footer.css");
 
-.contenuComm{
-    display:inline-block;
-    justify-content: space-around;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-.commentsDate{
-    color: rgb(96, 92, 92);
-}
+    body {
+        /*style de la page entière*/
+        background-color: #FDF6F0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
 
-.commentsNote{
-    size: 10px;
-}
+    #banniere {
+        position: relative;
+        text-align: center;
+        margin: 2%;
+    }
 
-.commentsTexts{
-    font-size: 1rem;
-    text-align: left;
-    word-wrap: break-word;
+    #banniere img {
+        width: 60%; /* remplacer la taille fixe par 100% */
+        height: auto; /* permettre la redimension automatique */
+    }
+
+    .p {
+        font-size: 80%;
+        font-style: italic;
+        position: absolute;
+        bottom: 0%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+    }
+
+    #Recettes { /*ensemble des 3 recettes*/
+        text-align: center;
+        margin: 70px;
+    }
+
+    #Recettes li { /*recette une par une*/
+        display: inline-block;
+        justify-content: space-between;
+        width: 31%; /* remplacer la taille fixe par un pourcentage */
+        height: auto; /* permettre la redimension automatique */
+        background-color: black;
+    }
+
+    ul {
+        position: relative;
+        right: 5vw;
+    }
+
+    #categories { /*ensemble des catégories*/
+        text-align: center;
+    }
+
+    #categories button { /*categorie une par une*/
+        width: 30%; /* permettre la redimension automatique */
+        height: auto; /* permettre la redimension automatique */
+        border-radius: 20px;
+        border-style: none;
+        font-size: 16px;
+        font-weight: bold;
+        margin: 40px;
+        padding: 85px 4px 8px;
+        display: inline-block;
+        background-color: white; /*#c85103*/
+        color: black;
+        box-shadow: rgb(0 0 0 / 10%) 0px 0px 10px;
+        cursor: pointer;
+        position: relative;
+    }
+
+    #categories button:hover { /*quand on passe la souris dessus*/
+        background-color: whitesmoke;
+    }
+
+    #categories img {
+        width: 60%;
+        height: 60%;
+        position: absolute;
+        top: 15px;
+        left: 25px;
+        border-radius: 20px;
+    }
+
+    h4 {
+        font-size: 4vw;
+        text-align: center;
+    }
+
+    @media (max-width: 600px) {
+        h4 {
+            font-size: 2em;
+        }
+    }
 }

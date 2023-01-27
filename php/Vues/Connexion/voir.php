@@ -1,8 +1,9 @@
 <?php
+$erreur = "";
 if (isset($A_vue['erreur'])) {
     $erreur = $A_vue['erreur'];
-} else{
-    $erreur = "test";
+} else if (isset($A_vue['reussite'])){
+    $erreur = $A_vue['reussite'];
 }
 
 ?>
@@ -19,7 +20,7 @@ if (isset($A_vue['erreur'])) {
 <body>
 
 <div id="connect">
-    <form method="post" action="../php/index.php?url=Connexion/connexion">
+    <form method="post" action="../php/index.php?url=Compte/connexion">
     <div id="Onglet">
             <a id="connexion"><h3>SE CONNECTER</a>   <a id="inscription" href="../php/index.php?url=Inscription">S'INSCRIRE</a></h3>
         </div>

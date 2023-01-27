@@ -1,3 +1,12 @@
+<?php
+$condition = "";
+if (isset($A_vue['reussite'])){
+    $condition = $A_vue['reussite'];
+} elseif (isset($A_vue['erreur'])){
+    $condition = $A_vue['erreur'];
+}
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -14,7 +23,7 @@
 <div id="formulaire">
     <form method="post" action="../php/index.php?url=Inscription/creerUtilisateur" enctype="multipart/form-data">
         <div id="Onglets">
-            <h3><a id="connexion" href="../php/index.php?url=Connexion">SE CONNECTER</a> <a id="inscription">S'INSCRIRE</a></h3>
+            <h3><a id="connexion" href="../php/index.php?url=Compte">SE CONNECTER</a> <a id="inscription">S'INSCRIRE</a></h3>
         </div>
         <br>
         <div><strong>Rejoignez la grande communauté Caramelange</strong></div>
@@ -27,6 +36,8 @@
         <input type="file" name="photo" id="inputImage" accept="image/*">
         <img id="profile_preview" width="100" height="100" src="">
         <button class="boutonLog" type="submit">C'EST PARTI</button>
+        <?php echo $condition ?>
+
     </form>
     <!--script js pour afficher l'image choisie-->
     <script>

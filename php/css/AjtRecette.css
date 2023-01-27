@@ -1,0 +1,61 @@
+#formRecette{
+    margin: 100px;
+    padding: 0;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+input[type="text"], input[type="password"], input[type="number"], input[type="textarea"]{  /*formulaire avec tous les inputs*/
+    box-sizing: border-box;
+    display: block;
+    position: inherit;
+    margin: 5px auto;
+    font-size: 13px;
+    background: transparent;
+    border: 2px solid rgb(152, 151, 151);
+    outline: none;
+    height: 40px;
+    width: 220px;
+}
+
+input[type="file"]{
+    display: block;
+    position: inherit;
+    margin: 20px auto;
+    font-size: 13px;
+}
+
+.boutonLog{ /*bouton se connecter et s'inscrire*/
+    border-radius: 6px;
+    outline: none;
+    background: #a17d60;
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+    padding: 8px 80px;
+    position: relative;
+    margin: 20px;
+    margin-bottom: 40px;
+}
+
+.boutonReset{
+    border-radius: 6px;
+    outline: none;
+    background: #a17d60;
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+    padding: 8px 80px;
+    position: relative;
+    margin: 20px;
+    margin-bottom: 40px;
+}
+
+
+.boutonLog:hover{
+    background-color: #dbb79a;
+}
+
+.boutonReset:hover{
+    background-color: #dbb79a;
+}
