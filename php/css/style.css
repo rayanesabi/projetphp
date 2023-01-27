@@ -336,3 +336,7 @@ h4{
     text-align: left;
     word-wrap: break-word;
 }
+
+p {
+    font-size: 13px;
+}

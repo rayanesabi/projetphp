@@ -16,6 +16,7 @@ $recettes = $A_vue['aleatoire'];
 
 <body>
 
+
     <div id="banniere">
         <img src="Vues/images/cheescake.jpg" class="main-image">
         <div class="p">«Tout le monde peut pâtisser»</div>
@@ -74,6 +75,7 @@ $recettes = $A_vue['aleatoire'];
     <br>
     <br>
     <br>
+
 </body>
 
 </html>
