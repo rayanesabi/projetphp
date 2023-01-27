@@ -29,7 +29,6 @@ if (isset($A_vue['erreur'])) {
     </form>
     <?php echo $erreur?>
 </div>
-
 </body>
 </html>
 <style>
