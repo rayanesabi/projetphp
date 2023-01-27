@@ -19,7 +19,7 @@ $image = base64_encode($_SESSION['photo']);
     <p><?php echo $condition ?></p>
     <h1>Mon compte</h1>
     <div class="user-info">
-        <?php echo '<img src="data:image/png;base64,' . $image . '"class="card-img-top" >' ?>
+        <?php echo '<img src="data:image/png;base64,' . $image . '"class="photo-profil" >' ?>
         <p>Nom d'utilisateur : <?= $_SESSION['utilisateur']['pseudo'] ?></p>
         <p>Adresse email : <?= $_SESSION['utilisateur']['email'] ?></p>
     </div>
