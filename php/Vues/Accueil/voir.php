@@ -15,6 +15,7 @@
     <img src="Vues/images/cheescake.jpg">
     <div class="p">«Tout le monde peut pâtisser»</div>
 </div>
+
 <div id="Recettes">
     <ul>
         <li><a id="recette1">tarte</a></li>
