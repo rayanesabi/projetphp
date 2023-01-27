@@ -21,7 +21,7 @@
         <li><a id="accueil" href="../php/index.php">ACCUEIL</a></li>
         <li><a id="connex" href="../php/index.php?url=Connexion">CONNEXION </a></li>
         <li>|</li>
-        <li><a id="inscr" href="../php/index.php?url=Inscription">INSCRIPTION</a></li>
+        <li><a id="inscr" href="../index.php?url=Inscription">INSCRIPTION</a></li>
     </ul>
 </nav>
 </body>

@@ -1,3 +1,21 @@
+<?php
+require_once 'C:\xampp\htdocs\projetphp\php\Modele\Accueil.php';
+$accueil = new Accueil();
+$nbRecettes = $accueil->donneNbRecette();
+$testi = rand(0, $nbRecettes);
+$testo = rand(0, $nbRecettes);
+$testy = rand(0, $nbRecettes);
+
+$recette = new Accueil();
+$test = $recette->test($testi);
+
+$recette2 = new Accueil();
+$testp = $recette2->test($testo);
+
+$recette3 = new Accueil();
+$testr = $recette3->test($testy);
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -17,9 +35,12 @@
 </div>
 <div id="Recettes">
     <ul>
-        <li><a id="recette1">tarte</a></li>
-        <li><a id="recette2">eclair</a></li>
-        <li><a id="recette3">choux</a></li>
+        <li><a id="recette1" href="../php/index.php?id_recette='<?= $test['id_recette'] ?> '&url=RecetteChoisie"
+><?php print_r($test['nom']) ?> </a></li>
+        <li><a id="recette2" href="../php/index.php?id_recette='<?= $test['id_recette'] ?> '&url=RecetteChoisie"
+> <?php print_r($testp['nom']) ?></a></li>
+        <li><a id="recette3" href="../php/index.php?id_recette='<?= $test['id_recette'] ?> '&url=RecetteChoisie""
+><?php print_r($testr['nom']) ?></a></li>
     </ul>
 </div>
 <h4>Recettes par Catégorie</h4>

@@ -27,6 +27,4 @@ private $pdo;
             return false;
         }
     }
-
-
 }

@@ -12,7 +12,7 @@
 <body>
 
 <div id="formulaire">
-    <form method="post" action="../php/index.php?url=Inscription/creerUtilisateur" enctype="multipart/form-data">
+    <form method="post" action="../index.php?url=Inscription/creerUtilisateur" enctype="multipart/form-data">
         <div id="Onglets">
             <h3><a id="connexion" href="../php/index.php?url=Connexion">SE CONNECTER</a> <a id="inscription">S'INSCRIRE</a></h3>
         </div>
