@@ -8,6 +8,41 @@ body{ /*style de la page entière*/
     padding: 0;
 }
 
+.boutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    height: 50px;
+
+}
+
+.boutton-page-recette {
+    overflow: hidden;
+    z-index: 111;
+}
+
+.boutton-page-recette button {
+    padding: 10px;
+  width: 100%;
+  border: none;
+  background: none;
+  outline: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #a17d60;
+  border-radius: 10px;
+}
+
+.boutton-page-recette :hover{
+    transition: 0.4s;
+    background-color: #ad8d72;
+    border: 1.8px solid #ad8d72;
+  }
+
+
 #banniere{
     position: relative;
     text-align: center;
@@ -161,7 +196,8 @@ h4{
 
 .container{
     padding: 20px 60px;
-    margin: 150px;
+    margin: 20px 150px 150px 150px;
+    margin-top: 20px;
     border-radius: 30px;
     background-color:white ;
     box-shadow:rgb(0 0 0 / 10%) 0px 0px 10px;
