@@ -1,5 +1,4 @@
 <?php
-require_once 'C:\xampp\htdocs\projetphp\php\Modele\RecetteChoisie.php';
 $test = new RecetteChoisie();
 $recup = $_GET['id_recette'];
 $ty = $test->afficherCommentaires($recup);
