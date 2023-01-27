@@ -25,14 +25,26 @@ $image = base64_encode($resultats['image']);
 <div class="container">
     <h4><?php print_r($resultats['nom']) ?></h4>
 
-    <div class="corps">
-        <div class="avis">
-            <div class="rating" >
-                <!----><a id="note5" href="#5" title="Donner 5 étoiles">☆</a>
-                <!----><a id="note4" href="#1" title="Donner 4 étoile">☆</a>
-                <!----><a id="note3" href="#4" title="Donner 3 étoiles">☆</a>
-                <!----><a id="note2" href="#3" title="Donner 2 étoiles">☆</a>
-                <!----><a id="note1" href="#2" title="Donner 1 étoiles">☆</a>
+
+        <div class="corps">
+            <div class="avis">
+                <div class="rating">
+                    <a id="note5" href="#5" title="Donner 5 étoiles">☆</a>
+                    <a id="note4" href="#4" title="Donner 4 étoiles">☆</a>
+                    <a id="note3" href="#3" title="Donner 3 étoiles">☆</a>
+                    <a id="note2" href="#2" title="Donner 2 étoiles">☆</a>
+                    <a id="note1" href="#1" title="Donner 1 étoile">☆</a>
+                </div>
+                <div class="cmb_personnes">
+                    6 personnes
+                </div>
+            </div>
+            <div class="box_image">
+                <?php
+                        $image = base64_encode($resultats['image']);
+                        echo '<img src="data:image/png;base64,' . $image . '"class="card-img-top" alt= ' . $resultats['nom'] . '>';
+                ?>
+
             </div>
             <div class="cmb_personnes">
                 6 personnes

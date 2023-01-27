@@ -42,6 +42,13 @@ body{ /*style de la page entière*/
     border: 1.8px solid #ad8d72;
   }
 
+.random-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
 
 #banniere{
     position: relative;
@@ -55,28 +62,59 @@ body{ /*style de la page entière*/
 }
 
 .p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
     font-size: 30px;
     font-style: italic;
     position: absolute;
     bottom: 20px;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: black;
+    border-radius: 10px;
+    width: 25%;
 }
 
-#Recettes{ /*ensemble des 3 recettes*/
-    text-align: center;
-    margin: 70px;
+.main-image {
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #888888;
+}
+
+
+#Recettes ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 }
 
 #Recettes li{ /*recette une par une*/
-    display: inline-block;
-    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 310px;
     height: 420px;
-    background-color: black;
-
+    overflow: hidden;
 }
+
+#Recettes img {
+    display: block;
+    object-fit: cover;
+    width: 18rem;
+    height: 18rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #888888;
+}
+
+.nom-recettes {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+
 
 #categories{ /*ensemble des catégories*/
     text-align: center;
@@ -192,6 +230,16 @@ h4{
     color: black;
     background-color: black;
     width: 620px;
+}
+
+#ligneAccueil{
+    display: flex;
+    margin: 2% 15% 2% 15%;
+    height: 2px;
+    color: black;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 10px;
 }
 
 .container{
